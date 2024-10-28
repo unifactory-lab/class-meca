@@ -15,7 +15,8 @@ edit_uri: edit/main/docs/
 nav:
   - Accueil :
     - index.md
-    - class/intro.md
+    - class/0.intro.md
+    - class/1.vectors.md
     - Résumé de cours : class/sos.md
   - Exercices: 
     - exo/index.md
@@ -105,7 +106,8 @@ markdown_extensions:
     emoji_index: !!python/name:material.extensions.emoji.twemoji
     emoji_generator: !!python/name:material.extensions.emoji.to_svg
 - pymdownx.details
-- pymdownx.tabbed
+- pymdownx.tabbed:
+    alternate_style: true
 - pymdownx.arithmatex:
       generic: true
 - pymdownx.superfences:
