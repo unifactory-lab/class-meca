@@ -1,11 +1,28 @@
 window.MathJax = {
-  loader: {load: ['[tex]/boldsymbol']},
+  loader: {load: ['[tex]/autoload']]},
   tex: {
+    autoload: {
+      action: ['toggle', 'mathtip', 'texttip'],
+      amscd: [[], ['CD']],
+      bbox: ['bbox'],
+      boldsymbol: ['boldsymbol'],
+      braket: ['bra', 'ket', 'braket', 'set', 'Bra', 'Ket', 'Braket', 'Set', 'ketbra', 'Ketbra'],
+      cancel: ['cancel', 'bcancel', 'xcancel', 'cancelto'],
+      color: ['color', 'definecolor', 'textcolor', 'colorbox', 'fcolorbox'],
+      enclose: ['enclose'],
+      extpfeil: ['xtwoheadrightarrow', 'xtwoheadleftarrow', 'xmapsto',
+                 'xlongequal', 'xtofrom', 'Newextarrow'],
+      html: ['href', 'class', 'style', 'cssId'],
+      mhchem: ['ce', 'pu'],
+      newcommand: ['newcommand', 'renewcommand', 'newenvironment', 'renewenvironment', 'def', 'let'],
+      unicode: ['unicode'],
+      verb: ['verb']
+    },
     inlineMath: [["\\(", "\\)"], ["$", "$"]],
     displayMath: [["\\[", "\\]"], ["$$", "$$"]],
     processEscapes: true,
     processEnvironments: true,
-    packages: {'[+]': ['boldsymbol']}
+    packages: {'[+]': ['autoload']}
   },
   options: {
     ignoreHtmlClass: ".*|",
