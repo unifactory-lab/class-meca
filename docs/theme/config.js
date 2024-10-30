@@ -1,5 +1,5 @@
 window.MathJax = {
-  loader: {load: ['[tex]/autoload']]},
+  loader: {load: ['[tex]/autoload']},
   tex: {
     autoload: {
       action: ['toggle', 'mathtip', 'texttip'],
