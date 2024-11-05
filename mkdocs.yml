@@ -17,6 +17,7 @@ nav:
     - index.md
     - class/0.intro.md
     - class/1.vectors.md
+    - class/2.static.md
     - Résumé de cours : class/sos.md
   - Exercices: 
     - exo/index.md
