@@ -20,8 +20,6 @@ nav:
     - Résumé de cours : class/sos.md
   - Exercices: 
     - exo/index.md
-    - Travaux dirirgée: 
-      - exo/td1.md
     - Travaux pratiques: 
       - exo/tp1.md
 
@@ -61,6 +59,22 @@ plugins:
   - charts
   - macros
   - pseudocode
+  - glightbox : 
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      skip_classes:
+        - custom-skip-class-name
+      auto_caption: false
+      caption_position: bottom
+      background: white
+      shadow: true
+      manual: false
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js

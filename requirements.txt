@@ -6,3 +6,4 @@ neoteroi-mkdocs
 mkdocs-add-number-plugin
 mkdocs-macros-plugin
 mkdocs-pseudocode
+mkdocs-glightbox
