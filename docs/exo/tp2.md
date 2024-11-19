@@ -8,17 +8,29 @@ Dans ce TP, vous allez concevoir une balance romaine, un dispositif traditionnel
 
 Vous commencerez par calculer et dimensionner les différents éléments de la balance en appliquant les principes de la statique. Ensuite, vous passerez à la modélisation des pièces dans **3DExperience** pour aboutir à une conception fonctionnelle et optimisée. À chaque étape, il sera essentiel d’ajuster vos calculs et vos choix pour maintenir l’équilibre du système.
 
+La balance devra être conçue pour :
+
+- Avoir une lecture précise grâce à une graduation définie.
+- Maintenir un équilibre stable pour toute la plage de poids.
+- Respecter les contraintes physiques imposées, notamment l’encombrement du contrepoids.
+
+Vous utiliserez 3DExperience pour modéliser la balance et valider vos calculs.
+
 ---
 
 ## Étape 1 : Dimensionnement du bras gradué
 
-Le bras gradué est l'élément principal de la balance. Il s'agit d'une tige cylindrique en acier (\(7.86 \, \text{g/cm}^3\)) de **diamètre 15 mm**. Ce bras doit inclure des graduations régulières correspondant aux masses à mesurer, par exemple **1 kg tous les 20 mm**. Vous commencerez par déterminer la longueur totale du bras.
+Nous commencerons par définir les dimensions du bras gradué de la balance. Il s'agit de l'élément principal de la balance. Il s'agit d'une tige cylindrique en acier (\(7.86 \, \text{g/cm}^3\)) de **diamètre 15 mm**. 
 
 ### Calculs de la longueur et du poids
 
-Pour garantir une lecture précise, vous devez d'abord définir la longueur totale du bras. Celle-ci doit inclure toutes les graduations nécessaires pour mesurer de **0 à 30 kg**, en prévoyant un espace supplémentaire après le pivot afin que les graduations ne soient pas masquées. Une fois la longueur définie, calculez le poids du bras en utilisant la densité de l'acier et la formule du volume d'un cylindre.
+Pour garantir une lecture précise, vous devez d'abord définir un interval de graduation. Vous en déduirez la longueur totale du bras. Celle-ci doit inclure toutes les graduations nécessaires pour mesurer de **0 à 30 kg**.
 
-Prenez soin de noter vos calculs dans le tableur fourni. Ce dernier vous aidera à ajuster vos résultats si des modifications sont nécessaires au fil du TP.
+!!! question "Question 1"
+    - Déterminez la longueur optimale du bras pour assurer une lecture précise du poids à haque graduation (par exemple, 1 kg tous les 20mm).
+    - Calculez le poids total du bras gradué
+
+Prenez soin de noter vos calculs dans un tableur Excel. Ce dernier vous aidera à ajuster vos résultats si des modifications sont nécessaires au fil du TP.
 
 ### Modélisation du bras
 
@@ -28,17 +40,40 @@ Une fois les calculs terminés, ouvrez **3DExperience** et modélisez le bras gr
 
 ## Étape 2 : Conception du contrepoids
 
-Le contrepoids est l’élément clé pour équilibrer la balance. Il doit compenser non seulement le poids du bras gradué mais aussi celui du panier de pesée, qui pèse **500 g à vide**.
+Le contrepoids est l’élément clé pour équilibrer la balance. Il doit compenser le poids du bras gradué.
+
+La méthode de fonderie disponible impose un volume maximum pour la conception du contrepoids. Il doit respecter une contrainte d’encombrement maximale de \(20 \times 20 \times 10 \, \text{cm}
+\). 
 
 ### Calcul du poids et choix des matériaux
 
-Utilisez la relation d’équilibre statique pour déterminer le poids idéal du contrepoids. Prenez en compte la position des éléments sur le bras et appliquez la formule d’équilibre :
+Utilisez la relation d’équilibre statique pour déterminer le poids idéal du contrepoids. Prenez en compte la position des éléments sur le bras.
 
-Choisissez un matériau adapté parmi ceux disponibles (acier, plomb) en tenant compte de la contrainte d’encombrement, fixée à \(25 \times 25 \times 10 \, \text{cm}\).
+Choisissez ensuite un matériaux parmis ceux disponibles :
+
+  - Acier (\(7,86 \, \text{g/cm}^3\)).
+  - Aluminium (\(2.7 \, \text{g/cm}^3\)).
+  - Plomb (\(11.3 \, \text{g/cm}^3\)).
+
+!!! question "Question 2"
+    En utilisant le principe fondamental de la statique, calculez le poids idéal du contrepoids permettant d'assurer l'équilibre de la barre seule.
+
+
+### Configuration de la balance et du contrepoids
+
+Planifiez la configuration de la balance, en tenant compte des éléments suivants :
+
+- Position du pivot : Localisez le point d’appui du bras pour assurer un fonctionnement optimal.
+- Placement du contrepoids : Assurez-vous que sa position équilibre le système tout en respectant l’encombrement.
+- Système de mesure : Déterminez la façon dont les poids seront mesurés avec précision sur la balance.
+- Forme du contrepoids En fonction du matériaux choisi, concevez un contrepoids qui respecte l'encombrement imposé. 
+
+!!! question "Question 3"
+    Réalisez un schéma de synthèse de vos décisions de conceptions.
 
 ### Conception du contrepoids
 
-Une fois le poids calculé, réfléchissez à une forme adaptée qui respecte les contraintes. Modélisez ensuite le contrepoids dans **3DExperience** et ajustez ses dimensions pour qu’il s’intègre harmonieusement au système.
+Une fois le poids calculé, réfléchissez à une forme adaptée qui respecte les contraintes de dimmensionnement. Modélisez ensuite le contrepoids dans **3DExperience** et ajustez ses dimensions pour qu’il s’intègre harmonieusement au système.
 
 ---
 
