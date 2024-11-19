@@ -23,6 +23,7 @@ nav:
     - exo/index.md
     - Travaux pratiques: 
       - exo/tp1.md
+      - exo/tp2.md
 
 theme:
   language: fr
