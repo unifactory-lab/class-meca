@@ -1,5 +1,7 @@
 # TP 3 : Conception d’un Système Dynamique - La Grue Rotative
 
+![](https://loadmate.in/wp-content/uploads/2021/04/Pillar-Mounted-Jib-Crane-Chain-Hoist-1.jpeg)
+
 ## Introduction
 
 Dans ce TP, vous allez concevoir une grue rotative capable de déplacer un objet le long de son bras horizontal, tout en prenant en compte les forces dynamiques générées par la rotation. Ce projet vous permettra de maîtriser les concepts liés aux systèmes en rotation, notamment la force centrifuge et les frottements, et de concevoir un mécanisme fonctionnel pour déplacer une charge.
