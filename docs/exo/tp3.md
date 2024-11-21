@@ -15,14 +15,14 @@ Vous prendrez en compte, l'effet de la force centrifuge ainsi que les frottement
 
 ### Calculs initiaux
 
-Pour une charge de **500 kg** située à une distance de **6 m** de l’axe de rotation, avec une vitesse angulaire de **0,1 rad/s**, calculez les forces suivantes :
+Pour une charge de $500 kg$ située à une distance de $6 m$ de l’axe de rotation, avec une vitesse angulaire de $0,1 rad.s^{-1}$, calculez les forces suivantes :
 
 - La force centrifuge.
 - Les forces de frottement statique et dynamique.
 
 Notez vos résultats dans un tableur pour automatiser les ajustements si des paramètres évoluent.
 
-Déterminez l'acceleration maximum pour minimiser le temps d'accélération du système jusqu'à une vitesse de $3m.s^-1$
+Déterminez l'acceleration maximum pour minimiser le temps d'accélération du système jusqu'à une vitesse de $3m.s^{-1}$
 
 ## Étape 2 : Dimensionnement du mécanisme de déplacement
 
