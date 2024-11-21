@@ -22,7 +22,7 @@ Pour une charge de **500 kg** située à une distance de **6 m** de l’axe de r
 
 Notez vos résultats dans un tableur pour automatiser les ajustements si des paramètres évoluent.
 
-Déterminez l'acceleration maximum pour minimiser le temps d'accélération du système.
+Déterminez l'acceleration maximum pour minimiser le temps d'accélération du système jusqu'à une vitesse de $3m.s^-1$
 
 ## Étape 2 : Dimensionnement du mécanisme de déplacement
 
