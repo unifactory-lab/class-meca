@@ -16,6 +16,14 @@ Le poids total du véhicule est de $P = 17450N$. La position du centre de gravit
 - **Question 1** : Calculez les valeurs des réaction au appui $A$ et $B$.
 - **Question 2** : A votre avis, cette voiture est plutôt adapté à une poussée par propulsion ou par traction ? (Roue motrice à l'avant ou à l'arrière ?)
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ### Exercice 2 : Basculement d'un tractopelle
 
@@ -29,6 +37,23 @@ La masse de l'engin est de $12.5$ tonnes. La position du centre de gravité est 
 - **Question 2** : Quel est la valeur maximum que peut transporter l'engin de chantier.
 
 ---
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## II. Résitance des matériaux
 
@@ -49,7 +74,26 @@ En tant qu’ingénieur, vous devez :
 3. Si la contrainte admissible est dépassée, proposer un nouveau diamètre pour la barre afin d'assurer sa résistance tout en respectant les critères de sécurité.
 4. Déterminer l’élongation de la barre sous l’effet de la traction, en tenant compte de ses nouvelles dimensions.  
    
-### Exercice 2 : Étude de la déformation d’une barre en TPU
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+### Exercice 4 : Étude de la déformation d’une barre en TPU
 
 ![](./images/training/exo4.png)
 
