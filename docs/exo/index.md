@@ -11,7 +11,7 @@
 
 - [Exercice](./training.md) : Préparation examen
 - [TP1](./tp1.md) : Prise en main de 3DExperience
-- [TP2](./tp.rdm.md) : Conception et dimensionnement d'un balance romaine
+- [TP2](./tp.rdm.md) : Simulation FEM
 
 ### I5 PAUC FISA
 
