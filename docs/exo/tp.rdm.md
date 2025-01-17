@@ -28,6 +28,8 @@ Nous allons commencer par la modélisation de la poutre IPN.
 
 ![Ajout du matériau](./images/tp.rdm/add.material.PNG)
 
+![Créer 1 copie](./images/tp.rdm/add.material.sim.png)
+
 ![Édition du matériau](./images/tp.rdm/add.material.edit.PNG)
 
 ![Édition du matériau](./images/tp.rdm/add.material.edit.dev.PNG)
