@@ -1,4 +1,4 @@
-# TP 2 : Simulation FEM d'une poutre IPN en acier galvanisé
+# TP 3 : Simulation FEM d'une poutre IPN en acier galvanisé
 
 ## Objectif
 

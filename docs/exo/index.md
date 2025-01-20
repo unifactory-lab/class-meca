@@ -6,7 +6,9 @@
 - [Exercice](./training.md) : Préparation examen
 - [TP1](./tp1.md) : Prise en main de 3DExperience
 - [TP2](./tp2.md) : Conception et dimensionnement d'un balance romaine
-
+- [TP3](./tp.rdm.md) : Simulation FEM - Compression
+- [TP4](./tp.rdm2.md) : Simulation FEM - Cisaillement
+  
 ### I4 PAUC FISE
 
 - [Exercice](./training.md) : Préparation examen
