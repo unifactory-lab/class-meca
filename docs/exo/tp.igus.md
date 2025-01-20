@@ -2,6 +2,8 @@
 
 ## 1. Contexte et objectifs
 
+![alt text](https://cdn.globalso.com/scic-robot/industrial-robot-2442.jpg){.img-small align=right}
+
 Dans le cadre du cours de Construction Mécanique, vous êtes sollicités pour concevoir et dimensionner un bras robotisé de type SCARA (Selective Compliance Assembly Robot Arm). Par chance, ce projet se déroule en même temps qu'une intervention de la société **IGUS**, fournisseur de composants mécaniques (paliers, guides linéaires, passe-câbles, etc.). 
 
 L’objectif principal est de **concevoir** puis de **valider** la faisabilité mécanique d’un robot SCARA destiné à la manipulation d’objets de petite taille (quelques centaines de grammes à 1 kg maximum). 
