@@ -14,6 +14,7 @@
 - [Exercice](./training.md) : Préparation examen
 - [TP1](./tp1.md) : Prise en main de 3DExperience
 - [TP2](./tp.rdm.md) : Simulation FEM
+- [TP Final](./tp.igus.md) : Conception d'un bras robotisé
 
 ### I5 PAUC FISA
 

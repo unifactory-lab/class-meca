@@ -77,23 +77,11 @@ Nous allons commencer par la modélisation de la poutre IPN.
 
 #### 3. Maillage et simulation
 
-1. Mailler la géométrie :
-
-   - Ajuster la taille des éléments si nécessaire pour une bonne résolution.
+1. __Mailler la géométrie__ : Ajuster la taille des éléments si nécessaire pour une bonne résolution.
   
-2. Lancer la simulation statique.
-3. Une fois la simulation terminée, afficher les résultats :
+1. Lancer la simulation statique.
+2. Une fois la simulation terminée, afficher les résultats :
 
-4. Visualiser le critère de Von Mises pour observer la distribution des contraintes dans la poutre.
+3. Visualiser le critère de Von Mises pour observer la distribution des contraintes dans la poutre.
 
 ![Résultats Von Mises](./images/tp.rdm/vm.PNG)
-
----
-
-## Conclusion
-À la fin de ce TP, les étudiants auront acquis les compétences pour :
-- Modéliser une poutre en utilisant Part Design.
-- Créer et attribuer un matériau personnalisé dans Assembly Design.
-- Préparer et exécuter une analyse statique avec des conditions aux limites et des chargements appliqués.
-- Interpréter les résultats d'une simulation en utilisant le critère de Von Mises pour évaluer les contraintes dans une structure.
-
