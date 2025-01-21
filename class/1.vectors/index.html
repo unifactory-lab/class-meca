@@ -1,0 +1,1762 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Bienvenue sur le site dédié au cours de mécanique d'UniLaSalle Amiens.">
+      
+      
+        <meta name="author" content="Jules Topart">
+      
+      
+        <link rel="canonical" href="https://unifactory-lab.github.io/class-meca/class/1.vectors/">
+      
+      
+        <link rel="prev" href="../0.intro/">
+      
+      
+        <link rel="next" href="../2.static/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Chapitre I : Mathématiques de Base pour le Mécanicien Amateur - Cours de Mécanique</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=indivisa:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"indivisa";--md-code-font:"Ubuntu Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/neoteroi-mkdocs.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/pseudo-code.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="unilasalle" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapitre-i-mathematiques-de-base-pour-le-mecanicien-amateur" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+    <nav class="md-header__inner md-grid" aria-label="header.title">
+        <a href="../.." title="Cours de Mécanique"
+            class="md-header__button md-logo" aria-label="Cours de Mécanique" data-md-component="logo">
+            
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 22a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-6v7L9.5 7.5 7 9V2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12Z"/></svg>
+
+        </a>
+        <label class="md-header__button md-icon" for="__drawer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+        </label>
+
+        <img class="unilogo" src="https://unifactory-lab.github.io/class-meca/images/logo-unilasalle-white.png">
+
+        <div class="md-header__title" data-md-component="header-title">
+            <div class="md-header__ellipsis">
+                <div class="md-header__topic">
+                    <span class="md-ellipsis">
+                        Cours de Mécanique
+                    </span>
+                </div>
+                <div class="md-header__topic" data-md-component="header-topic">
+                    <span class="md-ellipsis">
+                        
+                        Chapitre I : Mathématiques de Base pour le Mécanicien Amateur
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <form class="md-header__option" data-md-component="palette">
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="unilasalle"
+                data-md-color-primary="" data-md-color-accent="" 
+                aria-label="Switch to dark mode"  type="radio"
+                name="__palette" id="__palette_1">
+            
+            <label class="md-header__button md-icon" title="Switch to dark mode"
+                for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+            
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate"
+                data-md-color-primary="" data-md-color-accent="" 
+                aria-label="Switch to light mode"  type="radio"
+                name="__palette" id="__palette_2">
+            
+            <label class="md-header__button md-icon" title="Switch to light mode"
+                for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+            
+            
+        </form>
+        
+        
+        
+        
+        <div class="md-header__source">
+            <a href="https://github.com/unifactory-lab/class-meca/" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    meca
+  </div>
+</a>
+        </div>
+        
+    </nav>
+    
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../.." class="md-tabs__link">
+          
+  
+    
+  
+  Accueil
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../exo/" class="md-tabs__link">
+          
+  
+    
+  
+  Exercices
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Cours de Mécanique" class="md-nav__button md-logo" aria-label="Cours de Mécanique" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 22a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-6v7L9.5 7.5 7 9V2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12Z"/></svg>
+
+    </a>
+    Cours de Mécanique
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/unifactory-lab/class-meca/" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    meca
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Accueil
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0.intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Chapitre I : Mathématiques de Base pour le Mécanicien Amateur
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre I : Mathématiques de Base pour le Mécanicien Amateur
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-les-scalaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Les Scalaires
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-grandeurs-physiques-et-unites" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Grandeurs Physiques et Unités
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Grandeurs Physiques et Unités">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-systeme-international-dunites-si" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Système International d&rsquo;Unités (SI)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-lanalyse-dimensionnelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. L’Analyse Dimensionnelle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. L’Analyse Dimensionnelle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-principe-de-lanalyse-dimensionnelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Principe de l’Analyse Dimensionnelle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-applications-de-lanalyse-dimensionnelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Applications de l’Analyse Dimensionnelle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-exemples-pratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Exemples Pratiques
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-les-vecteurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Les Vecteurs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Les Vecteurs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Définition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-types-de-vecteurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Types de Vecteurs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-representation-des-vecteurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Représentation des Vecteurs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-operations-sur-les-vecteurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 Opérations sur les Vecteurs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4 Opérations sur les Vecteurs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#441-laddition" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.1 L&rsquo;addition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#442-la-soustraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.2 La soustraction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#443-multiplication-dun-vecteur-par-un-scalaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.3 Multiplication d&rsquo;un Vecteur par un Scalaire
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#444-produit-scalaire-produit-interieur" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.4 Produit Scalaire (Produit Intérieur)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#445-produit-vectoriel-produit-exterieur" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.5 Produit Vectoriel (Produit Extérieur)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-proprietes-algebriques" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 Propriétés Algébriques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5 Propriétés Algébriques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proprietes-de-laddition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propriétés de l&rsquo;Addition :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proprietes-de-la-multiplication-par-un-scalaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propriétés de la Multiplication par un Scalaire
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-bases-et-composantes-des-vecteurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Bases et Composantes des Vecteurs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Bases et Composantes des Vecteurs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-base-de-lespace-vectoriel" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Base de l&rsquo;Espace Vectoriel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-base-orthonormee" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Base orthonormée
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-formules-usuelles" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Formules usuelles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Formules usuelles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#62-vecteurs-dans-r3" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Vecteurs dans \(R^3\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vecteur-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vecteur Position
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.static/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre II : Analyse statique
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Résumé de cours
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../exo/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Exercices
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Exercices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Travaux pratiques
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Travaux pratiques
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exo/tp1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP 1 : Prise en main de 3DExperience
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exo/tp2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP 2 : Conception et dimensionnement d&rsquo;une Balance romaine
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exo/tp.rdm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP 3 : Simulation FEM d&rsquo;une poutre IPN en acier galvanisé
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-les-scalaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Les Scalaires
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-grandeurs-physiques-et-unites" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Grandeurs Physiques et Unités
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Grandeurs Physiques et Unités">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-systeme-international-dunites-si" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Système International d&rsquo;Unités (SI)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-lanalyse-dimensionnelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. L’Analyse Dimensionnelle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. L’Analyse Dimensionnelle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-principe-de-lanalyse-dimensionnelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Principe de l’Analyse Dimensionnelle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-applications-de-lanalyse-dimensionnelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Applications de l’Analyse Dimensionnelle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-exemples-pratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Exemples Pratiques
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-les-vecteurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Les Vecteurs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Les Vecteurs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Définition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-types-de-vecteurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Types de Vecteurs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-representation-des-vecteurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Représentation des Vecteurs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-operations-sur-les-vecteurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 Opérations sur les Vecteurs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4 Opérations sur les Vecteurs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#441-laddition" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.1 L&rsquo;addition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#442-la-soustraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.2 La soustraction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#443-multiplication-dun-vecteur-par-un-scalaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.3 Multiplication d&rsquo;un Vecteur par un Scalaire
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#444-produit-scalaire-produit-interieur" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.4 Produit Scalaire (Produit Intérieur)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#445-produit-vectoriel-produit-exterieur" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.5 Produit Vectoriel (Produit Extérieur)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-proprietes-algebriques" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 Propriétés Algébriques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5 Propriétés Algébriques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proprietes-de-laddition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propriétés de l&rsquo;Addition :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proprietes-de-la-multiplication-par-un-scalaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propriétés de la Multiplication par un Scalaire
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-bases-et-composantes-des-vecteurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Bases et Composantes des Vecteurs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Bases et Composantes des Vecteurs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-base-de-lespace-vectoriel" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Base de l&rsquo;Espace Vectoriel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-base-orthonormee" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Base orthonormée
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-formules-usuelles" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Formules usuelles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Formules usuelles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#62-vecteurs-dans-r3" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Vecteurs dans \(R^3\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vecteur-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vecteur Position
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="chapitre-i-mathematiques-de-base-pour-le-mecanicien-amateur">Chapitre I : Mathématiques de Base pour le Mécanicien Amateur</h1>
+<p><font size="5">Comment représenter le monde qui nous entoure pour résoudre des problèmes ?</font></p>
+<p>La mécanique utilise des outils mathématiques pour décrire et prédire le comportement des systèmes physiques sous différentes conditions. Dans ce chapitre, nous posons les bases de cette représentation, en introduisant les <strong>scalaires</strong> et en abordant les notions fondamentales de <strong>grandeurs physiques</strong> et d’<strong>analyse dimensionnelle</strong>. Ces concepts sont cruciaux pour aborder les prochaines étapes, où nous explorerons les <strong>vecteurs</strong> et leurs applications en mécanique.</p>
+<h2 id="1-les-scalaires">1. Les Scalaires</h2>
+<p>En mathématiques, un <strong>scalaire</strong> est un objet mathématique qui est entièrement décrit par la valeur de sa magnitude. Les scalaires sont donc représenté par de <strong>nombres réels</strong> (<span class="arithmatex">\(\mathbb{R}\)</span>). En mécanique, les scalaires représentent des <strong>quantités physiques</strong> mesurables qui n&rsquo;ont pas de direction associée, mais uniquement une <strong>magnitude</strong> (ou grandeur). Ils sont utilisés pour décrire des propriétés fondamentales telles que la <strong>masse</strong>, le <strong>temps</strong>, ou la <strong>température</strong>.</p>
+<p>Ainsi, en considérant les scalaires comme des valeurs de <span class="arithmatex">\(\mathbb{R}\)</span>, nous pouvons effectuer des opérations classiques comme l’addition, la soustraction ou la multiplication de scalaires, sans se préoccuper d’une orientation spatiale.</p>
+<div class="admonition quote">
+<p class="admonition-title">In english please !</p>
+<p><strong>Scalar</strong>: a quantity represented as a real number (<span class="arithmatex">\(\mathbb{R}\)</span>) that has magnitude but no direction, used to describe physical properties like mass, time, and temperature.</p>
+</div>
+<h2 id="2-grandeurs-physiques-et-unites">2. Grandeurs Physiques et Unités</h2>
+<p>Les scalaires réprésentent souvent des <strong>grandeurs physiques</strong> et nécessitent des unités pour quantifier leur valeur. Ces grandeurs sont des propriétés d’un objet ou d’un phénomène qui peuvent être mesurées, telles que la <strong>longueur</strong>, la <strong>masse</strong>, ou la <strong>vitesse</strong>. Par exemple :</p>
+<ul>
+<li>La longueur est mesurée en <strong>mètres</strong> (m),</li>
+<li>La masse en <strong>kilogrammes</strong> (kg),</li>
+<li>Le temps en <strong>secondes</strong> (s).</li>
+</ul>
+<p>Pour normaliser et faciliter les échanges de données et les calculs, les grandeurs physiques sont exprimées dans le cadre du <strong>Système International d&rsquo;Unités (SI)</strong>.</p>
+<h3 id="21-systeme-international-dunites-si">2.1 Système International d&rsquo;Unités (SI)</h3>
+<p>Le <strong>Système International d&rsquo;Unités (SI)</strong> fournit une base cohérente pour la mesure des grandeurs. Les unités SI des grandeurs physiques principales sont résumées ci-dessous :</p>
+<table>
+<thead>
+<tr>
+<th><strong>Grandeur</strong></th>
+<th><strong>Symbole de l&rsquo;unité</strong></th>
+<th><strong>Nom de l&rsquo;unité</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Longueur</td>
+<td>m</td>
+<td>Mètre</td>
+</tr>
+<tr>
+<td>Masse</td>
+<td>kg</td>
+<td>Kilogramme</td>
+</tr>
+<tr>
+<td>Temps</td>
+<td>s</td>
+<td>Seconde</td>
+</tr>
+<tr>
+<td>Température</td>
+<td>K</td>
+<td>Kelvin</td>
+</tr>
+<tr>
+<td>Courant électrique</td>
+<td>A</td>
+<td>Ampère</td>
+</tr>
+<tr>
+<td>Quantité de matière</td>
+<td>mol</td>
+<td>Mole</td>
+</tr>
+<tr>
+<td>Intensité lumineuse</td>
+<td>cd</td>
+<td>Candela</td>
+</tr>
+</tbody>
+</table>
+<p>Certaines unités dérivées peuvent s’exprimer à partir des <strong>unités de base du système SI</strong> en combinant celles-ci selon des relations mathématiques spécifiques. Par exemple, l’unité de <strong>force</strong>, le <strong>Newton</strong> (N), se décompose en termes de kilogrammes, mètres, et secondes, puisqu’il correspond à la <strong>force nécessaire pour accélérer une masse d&rsquo;un kilogramme à une vitesse d’un mètre par seconde carré</strong>.</p>
+<div class="arithmatex">\[
+\text{N} = \text{kg} \cdot \frac{\text{m}}{\text{s}^2}
+\]</div>
+<p>Cette décomposition permet de comprendre que le Newton est en réalité une unité composite, construite à partir des unités de masse, longueur, et temps.</p>
+<p>Ce principe s’applique également à d’autres unités physiques, telles que :</p>
+<ul>
+<li>Le <strong>Joule</strong> (J), unité d’énergie, qui s’exprime comme un Newton mètre <span class="arithmatex">\((\text{N} \cdot \text{m})\)</span> ou, de façon équivalente, en <span class="arithmatex">\(\text{kg} \cdot \frac{\text{m}^2}{\text{s}^2}\)</span>.</li>
+<li>Le <strong>Watt</strong> (W), unité de puissance, qui est défini comme un Joule par seconde <span class="arithmatex">\((\text{J/s})\)</span>, soit également <span class="arithmatex">\(\text{kg} \cdot \frac{\text{m}^2}{\text{s}^3}\)</span>.</li>
+</ul>
+<p>Ces relations montrent comment les unités dérivées peuvent se ramener aux unités de base, facilitant ainsi les calculs et la vérification de la cohérence dimensionnelle dans les équations. Nous verrons plus tard à quoi servent ses équations. Mais avant de les apprendre par coeur, notons qu&rsquo;il existe une méthode infaillible pour tirer profit du système SI.</p>
+<h2 id="3-lanalyse-dimensionnelle">3. L’Analyse Dimensionnelle</h2>
+<p>L&rsquo;<strong>analyse dimensionnelle</strong> est un outil qui permet de vérifier la cohérence des équations physiques en se basant sur les unités. En décomposant chaque grandeur en ses dimensions fondamentales (longueur, masse, temps, etc.), on peut évaluer la validité d’une équation ou même esquisser la structure de certaines formules.</p>
+<h3 id="31-principe-de-lanalyse-dimensionnelle">3.1 Principe de l’Analyse Dimensionnelle</h3>
+<p>Une règle clé est que les deux côtés d&rsquo;une équation doivent avoir les <strong>mêmes dimensions</strong>. Prenons l’exemple de la vitesse, exprimée par :</p>
+<div class="arithmatex">\[
+v = \frac{d}{t}
+\]</div>
+<p>où :
+- <span class="arithmatex">\(v\)</span> représente la <strong>vitesse</strong> (en mètres par seconde, m/s),
+- <span class="arithmatex">\(d\)</span> est la <strong>distance</strong> (en mètres, m),
+- <span class="arithmatex">\(t\)</span> est le <strong>temps</strong> (en secondes, s).</p>
+<p>Les dimensions de chaque terme sont :</p>
+<div class="arithmatex">\[
+[v] = \frac{\text{m}}{\text{s}}, \quad [d] = \text{m}, \quad [t] = \text{s}
+\]</div>
+<p>Ce calcul montre que les dimensions de la vitesse <span class="arithmatex">\((\text{m/s})\)</span> sont cohérentes avec la définition physique.</p>
+<div class="admonition quote">
+<p class="admonition-title">In english please !</p>
+<p><strong>Dimensional analysis</strong>: a method to verify the consistency of physical equations by checking the fundamental units on each side of the equation.</p>
+</div>
+<h3 id="32-applications-de-lanalyse-dimensionnelle">3.2 Applications de l’Analyse Dimensionnelle</h3>
+<p>L&rsquo;analyse dimensionnelle nous permet de :</p>
+<ul>
+<li><strong>Vérifier la cohérence</strong> des équations,</li>
+<li><strong>Deviner des formules</strong> en se basant sur les dimensions des grandeurs,</li>
+<li><strong>Interpréter les phénomènes physiques</strong> par le prisme des dimensions fondamentales.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Les tips de top-top</p>
+<p>Lors d’un examen, maîtriser l’analyse dimensionnelle peut permettre de vérifier la validité d’une formule sans la mémoriser intégralement. Cette méthode pourra vous sortir de situations délicate en examens !</p>
+</div>
+<h3 id="33-exemples-pratiques">3.3 Exemples Pratiques</h3>
+<ol>
+<li><strong>Énergie cinétique</strong> : L&rsquo;énergie cinétique <span class="arithmatex">\(E\)</span> est donnée par :</li>
+</ol>
+<div class="arithmatex">\[
+E = \frac{1}{2}mv^2
+\]</div>
+<p>où <span class="arithmatex">\(m\)</span> est la masse (kg) et <span class="arithmatex">\(v\)</span> la vitesse (m/s). En termes de dimensions :</p>
+<div class="arithmatex">\[
+[E] = \text{kg} \cdot \left( \frac{\text{m}}{\text{s}} \right)^2 = \text{kg} \cdot \frac{\text{m}^2}{\text{s}^2} = \text{Joule (J)}
+\]</div>
+<ol start="2">
+<li><strong>Force</strong> : La force <span class="arithmatex">\(F\)</span> est définie par la seconde loi de Newton : <span class="arithmatex">\(F = ma\)</span>, où <span class="arithmatex">\(m\)</span> est la masse et <span class="arithmatex">\(a\)</span> l&rsquo;accélération.</li>
+</ol>
+<div class="arithmatex">\[
+[F] = \text{kg} \cdot \frac{\text{m}}{\text{s}^2} = \text{Newton (N)}
+\]</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Question</label><label for="__tabbed_1_2">Solution</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Supposons qu&rsquo;une force <span class="arithmatex">\(F\)</span> agit sur un objet et que cette force déplace l&rsquo;objet sur une distance <span class="arithmatex">\(d\)</span>. Quelle unité obtient-on en multipliant <span class="arithmatex">\(F\)</span> par <span class="arithmatex">\(d\)</span> ? </p>
+</div>
+<div class="tabbed-block">
+<p>En multipliant une force (en Newtons) par une distance (en mètres), on obtient des <strong>joules (J)</strong>, unité de l&rsquo;énergie, car :</p>
+<div class="arithmatex">\[
+F \times d = \text{N} \cdot \text{m} = \text{J}
+\]</div>
+<p>Ce résultat correspond au travail effectué par la force sur la distance <span class="arithmatex">\(d\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<p>Ces exemples montrent l’utilité de l’analyse dimensionnelle pour valider les expressions mathématiques et physiques.</p>
+<hr />
+<h2 id="4-les-vecteurs">4. Les Vecteurs</h2>
+<p>Dans les sections précédentes, nous avons étudié les <strong>scalaires</strong>, des quantités définies dans l&rsquo;ensemble des réels <span class="arithmatex">\(\mathbb{R}\)</span>, c&rsquo;est-à-dire dans un espace à une dimension. Cependant, pour représenter pleinement les phénomènes du monde réel, il est nécessaire de pouvoir décrire des grandeurs qui possèdent à la fois une magnitude, une <strong>direction</strong> et un <strong>sens</strong>. C&rsquo;est ici que les <strong>vecteurs</strong> interviennent : ils fournissent un cadre mathématique pour modéliser ces grandeurs multidimensionnelles.</p>
+<h3 id="41-definition">4.1 Définition</h3>
+<p>Un <strong>vecteur</strong> est un objet mathématique caractérisé par plusieurs propriétés fondamentales, qui lui permettent de représenter des grandeurs telles que le déplacement, la vitesse, l’accélération, ou la force.</p>
+<ol>
+<li><strong>Direction</strong> : La ligne d’action du vecteur, qui décrit l’orientation dans laquelle la grandeur s’applique.</li>
+<li><strong>Sens</strong> : Le sens du vecteur correspond au côté de la ligne d’action vers lequel le vecteur pointe.</li>
+<li><strong>Magnitude (ou Norme)</strong> : La longueur du vecteur, souvent notée <span class="arithmatex">\(||\vec{V}||\)</span> ou <span class="arithmatex">\(|\vec{V}|\)</span>. Cette quantité positive correspond à la grandeur de la force, de la distance, etc., souvent exprimée en unités physiques (comme les mètres pour la distance ou les newtons pour une force).</li>
+<li><strong>Point d’Application</strong> : Le point d’origine du vecteur, à partir duquel il agit.</li>
+</ol>
+<p>Dans le cadre de la mécanique, nous considérons les vecteurs dans des espaces à deux ou trois dimensions, notés respectivement <span class="arithmatex">\(\mathbb{R}^2\)</span> et <span class="arithmatex">\(\mathbb{R}^3\)</span>. Mathématiquement, un vecteur dans ces espaces peut être représenté par une suite ordonnée de <strong>composantes indépendantes</strong> qui déterminent une position dans l’espace ou un déplacement par exemple. Dans <span class="arithmatex">\(\mathbb{R}^3\)</span>, un vecteur <span class="arithmatex">\(\vec{V}\)</span> est défini par ses composantes dans les directions <span class="arithmatex">\(x\)</span>, <span class="arithmatex">\(y\)</span>, et <span class="arithmatex">\(z\)</span> :</p>
+<div class="arithmatex">\[
+\vec{V} = (V_x, V_y, V_z)
+\]</div>
+<p>où <span class="arithmatex">\(V_x\)</span>, <span class="arithmatex">\(V_y\)</span>, et <span class="arithmatex">\(V_z\)</span> sont des <strong>scalaires indépendants</strong> qui représentent les projections du vecteur sur chacun des axes de coordonnées. Cette notation nous permet de manipuler les vecteurs de manière algébrique et de réaliser des opérations telles que l&rsquo;addition, la soustraction, et la multiplication par un scalaire.</p>
+<p>Les vecteurs appartiennent à une structure mathématique plus large appelée <strong>espace vectoriel</strong>. Un espace vectoriel est un ensemble de vecteurs où deux opérations sont possibles : l&rsquo;addition de vecteurs et la multiplication par un scalaire. </p>
+<p>L&rsquo;<strong>addition de vecteurs</strong> permet de combiner deux vecteurs pour en obtenir un troisième. Cette addition a des propriétés qui simplifient les calculs : elle est associative et commutative, ce qui signifie que l’ordre d’addition n’importe pas, et chaque vecteur possède un opposé qui, additionné à lui-même, donne un vecteur nul (l&rsquo;équivalent du zéro).</p>
+<p>La <strong>multiplication par un scalaire</strong> signifie qu’on peut ajuster la longueur d’un vecteur en le multipliant par un nombre (un scalaire), sans modifier sa direction ou en inversant celle-ci si le nombre est négatif. Cette opération est également distributive et associative, et le vecteur reste inchangé si on le multiplie par 1, le scalaire neutre.</p>
+<p>Un espace vectoriel permet de manipuler des vecteurs comme des flèches dans l’espace, mais aussi des objets abstraits comme des fonctions, des suites, et des matrices, rendant cette structure très puissante pour l’étude de concepts variés en science et en ingénierie.</p>
+<h3 id="42-types-de-vecteurs">4.2 Types de Vecteurs</h3>
+<p>Les vecteurs se distinguent par leur point d’application et le rôle qu’ils jouent dans la modélisation des phénomènes physiques. Par exemple, un vecteur peut représenter une force ou une position, définie soit par rapport à l’origine d’un système de coordonnées, soit par rapport à un autre objet. Ce <strong>point d&rsquo;application</strong> influence alors la façon dont le vecteur agit sur le système. Cependant, dans certains cas, la position du point d’application n&rsquo;a pas d&rsquo;importance ; par exemple, une force appliquée sur un solide rigide peut glisser le long de sa ligne d’action sans modifier l&rsquo;état du solide.</p>
+<p>Voici les principaux types de vecteurs selon ces caractéristiques :</p>
+<ul>
+<li><strong>Vecteurs Liés</strong> : Ces vecteurs sont attachés à un point d’application fixe. Par exemple, une force appliquée en un point précis d’un objet est un vecteur lié, car son effet dépend de ce point d’application spécifique.</li>
+<li><strong>Vecteurs Glissants</strong> : Les vecteurs glissants peuvent se déplacer le long de leur ligne d’action sans modifier l’effet qu’ils produisent. Par exemple, une force appliquée sur un solide rigide est un vecteur glissant : si sa direction passe par le centre de gravité de l’objet, son point d’application le long de cette ligne d’action n’entraînera aucune rotation supplémentaire et son effet restera le même.</li>
+</ul>
+<h3 id="43-representation-des-vecteurs">4.3 Représentation des Vecteurs</h3>
+<p>Un vecteur peut être représenté de différentes manières. Géométriquement, il est représenté par une flèche dans l&rsquo;espace, avec une longueur proportionnelle à la norme du vecteur, une direction et un sens.</p>
+<p><a class="glightbox" href="../images/vector.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="center" src="../images/vector.svg" /></a></p>
+<p>Algébriquement on peut representer un vecteur en le décomposant suivant la base de notre espace. La plupart du temps nous utiliserons des <strong>Coordonnées Cartésiennes</strong> : Dans un espace à <span class="arithmatex">\(n\)</span> dimensions, un vecteur est défini par ses composantes selon les axes du système de coordonnées. Par exemple, dans <span class="arithmatex">\(\mathbb{R}^3\)</span>, un vecteur <span class="arithmatex">\(\vec{V}\)</span> est représenté par :</p>
+<div class="arithmatex">\[
+\vec{V} = (V_x, V_y, V_z)
+\]</div>
+<p>où <span class="arithmatex">\(V_x\)</span>, <span class="arithmatex">\(V_y\)</span>, et <span class="arithmatex">\(V_z\)</span> sont les projections de <span class="arithmatex">\(\vec{V}\)</span> sur les axes <span class="arithmatex">\(x\)</span>, <span class="arithmatex">\(y\)</span>, et <span class="arithmatex">\(z\)</span>.</p>
+<p>La norme du vecteurs (sa longueur) est obtenu grâce à la relation : </p>
+<div class="arithmatex">\[
+V = \sqrt{V_x^2 + V_y^2 + V_z^2}
+\]</div>
+<hr />
+<h3 id="44-operations-sur-les-vecteurs">4.4 Opérations sur les Vecteurs</h3>
+<p>Les vecteurs obéissent à des règles d&rsquo;opérations spécifiques, qui permettent de les manipuler mathématiquement.</p>
+<h4 id="441-laddition">4.4.1 L&rsquo;addition</h4>
+<p>L&rsquo;addition de deux vecteurs <span class="arithmatex">\(\vec{A}\)</span> et <span class="arithmatex">\(\vec{B}\)</span> donne un vecteur résultant <span class="arithmatex">\(\vec{C} = \vec{A} + \vec{B}\)</span>.</p>
+<p>Règle du Parallélogramme : Géométriquement, on place les vecteurs de telle sorte que l&rsquo;origine de <span class="arithmatex">\(\vec{B}\)</span> coïncide avec l&rsquo;extrémité de <span class="arithmatex">\(\vec{A}\)</span>. Le vecteur résultant est alors la diagonale du parallélogramme formé.</p>
+<p><a class="glightbox" href="../images/vector.add.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="center" src="../images/vector.add.svg" /></a></p>
+<p>L&rsquo;addition peut aussi s&rsquo;effectuer algébriquement en additionnant simplement les composantes des vecteurs. Soit <span class="arithmatex">\(\vec{A} = (A_x, A_y, A_z)\)</span> et <span class="arithmatex">\(\vec{B} = (B_x, B_y, B_z)\)</span>, deux vecteurs, alors :</p>
+<div class="arithmatex">\[
+\vec{C} = \vec{A} + \vec{B} = (A_x + B_x, \ A_y + B_y, \ A_z + B_z)
+\]</div>
+<h4 id="442-la-soustraction">4.4.2 La soustraction</h4>
+<p>La <strong>soustraction</strong> de vecteurs est définie comme l&rsquo;addition du vecteur opposé :</p>
+<div class="arithmatex">\[
+\vec{A} - \vec{B} = \vec{A} + (-\vec{B})
+\]</div>
+<p><a class="glightbox" href="../images/vector.sub.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="center" src="../images/vector.sub.svg" /></a></p>
+<p>Où <span class="arithmatex">\(-\vec{B}\)</span> est le vecteur opposé de <span class="arithmatex">\(\vec{B}\)</span>, ayant la même magnitude mais une direction opposée.</p>
+<h4 id="443-multiplication-dun-vecteur-par-un-scalaire">4.4.3 Multiplication d&rsquo;un Vecteur par un Scalaire</h4>
+<p>La multiplication d&rsquo;un vecteur <span class="arithmatex">\(\vec{V}\)</span> par un scalaire <span class="arithmatex">\(\alpha \in \mathbb{R}\)</span> produit un vecteur <span class="arithmatex">\(\alpha \vec{V}\)</span> dont la magnitude est multipliée par <span class="arithmatex">\(|\alpha|\)</span> et dont la direction reste la même si <span class="arithmatex">\(\alpha &gt; 0\)</span> ou est inversée si <span class="arithmatex">\(\alpha &lt; 0\)</span>.</p>
+<p><a class="glightbox" href="../images/vector.mul.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="center" src="../images/vector.mul.svg" /></a></p>
+<hr />
+<h4 id="444-produit-scalaire-produit-interieur">4.4.4 Produit Scalaire (Produit Intérieur)</h4>
+<p>Le <strong>produit scalaire</strong> entre deux vecteurs <span class="arithmatex">\(\vec{A}\)</span> et <span class="arithmatex">\(\vec{B}\)</span> est une opération qui associe deux vecteurs à un scalaire :</p>
+<div class="arithmatex">\[
+\vec{A} \cdot \vec{B} = ||\vec{A}|| \ ||\vec{B}|| \ \cos(\theta)
+\]</div>
+<p>Où <span class="arithmatex">\(\theta\)</span> est l&rsquo;angle entre <span class="arithmatex">\(\vec{A}\)</span> et <span class="arithmatex">\(\vec{B}\)</span>. En coordonnées cartésiennes :</p>
+<div class="arithmatex">\[
+\vec{A} \cdot \vec{B} = A_x B_x + A_y B_y + A_z B_z
+\]</div>
+<p>Le produit scalaire mesure la projection de l&rsquo;un des vecteurs sur l&rsquo;autre. Comme sont nom l&rsquo;indique, le résultat est un scalaire !</p>
+<h4 id="445-produit-vectoriel-produit-exterieur">4.4.5 Produit Vectoriel (Produit Extérieur)</h4>
+<p>Le <strong>produit vectoriel</strong> entre deux vecteurs <span class="arithmatex">\(\vec{A}\)</span> et <span class="arithmatex">\(\vec{B}\)</span> dans <span class="arithmatex">\(\mathbb{R}^3\)</span> est un vecteur <span class="arithmatex">\(\vec{C} = \vec{A} \times \vec{B}\)</span> dont la magnitude est donnée par :</p>
+<div class="arithmatex">\[
+||\vec{C}|| = ||\vec{A}|| \ ||\vec{B}|| \ \sin(\theta)
+\]</div>
+<p>La direction de C est toujours orthogonale (perpendiculaire) au plan formé par <span class="arithmatex">\(\vec{A}\)</span> et <span class="arithmatex">\(\vec{B}\)</span>, selon la règle de la main droite.</p>
+<p><a class="glightbox" href="../images/vector.hand.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="center" src="../images/vector.hand.svg" /></a></p>
+<p>Il est toutefois plus commun de calculer le produit vectoriel en utilisant les composantes individuelles des vecteurs (coordonnées) en utilisant la formule suivante :</p>
+<div class="arithmatex">\[
+\vec{C} = (A_y B_z - A_z B_y, \ A_z B_x - A_x B_z, \ A_x B_y - A_y B_x)
+\]</div>
+<p>Le produit vectoriel est utilisé pour calculer des moments, des couples, et est essentiel en mécanique pour analyser les rotations et les forces perpendiculaires.</p>
+<p>Pour simplifier le calcul et retrouver l&rsquo;équation vous pouvez utiliser la méthode suivante : </p>
+<ol>
+<li>Écrivez les vecteurs en colonnes et ajoutez une colonne vide pour le résultat :</li>
+</ol>
+<div class="arithmatex">\[
+\begin{array}{c|c|c}
+    A_x &amp; B_x &amp; ? \\
+    A_y &amp; B_y &amp; ? \\
+    A_z &amp; B_z &amp; ? \\
+\end{array}
+\]</div>
+<ol start="2">
+<li>Barrez la premières lignes et réécrivez la en bas, puis calculer la composante <span class="arithmatex">\(x\)</span> du résultat :</li>
+</ol>
+<p><a class="glightbox" href="../images/vector.outer.1.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="img-small center" src="../images/vector.outer.1.svg" /></a></p>
+<ol start="3">
+<li>Répéter pour les colonnes <span class="arithmatex">\(y\)</span> et <span class="arithmatex">\(z\)</span> :</li>
+</ol>
+<p><a class="glightbox" href="../images/vector.outer.2.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="img-small center" src="../images/vector.outer.2.svg" /></a></p>
+<p><a class="glightbox" href="../images/vector.outer.3.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="img-small center" src="../images/vector.outer.3.svg" /></a></p>
+<hr />
+<h3 id="45-proprietes-algebriques">4.5 Propriétés Algébriques</h3>
+<p>Les vecteurs obéissent à des propriétés algébriques similaires à celles des nombres réels, mais adaptées à leurs caractéristiques multidimensionnelles.</p>
+<h4 id="proprietes-de-laddition">Propriétés de l&rsquo;Addition :</h4>
+<ul>
+<li>
+<p>Commutativité : <span class="arithmatex">\(\vec{A} + \vec{B} = \vec{B} + \vec{A}\)</span></p>
+</li>
+<li>
+<p>Associativité : <span class="arithmatex">\((\vec{A} + \vec{B}) + \vec{C} = \vec{A} + (\vec{B} + \vec{C})\)</span></p>
+</li>
+<li>
+<p>Élément Neutre : Il existe un vecteur nul <span class="arithmatex">\(\vec{0}\)</span> tel que <span class="arithmatex">\(\vec{A} + \vec{0} = \vec{A}\)</span></p>
+</li>
+<li>
+<p>Inverse Additif : Pour tout vecteur <span class="arithmatex">\(\vec{A}\)</span>, il existe un vecteur <span class="arithmatex">\(-\vec{A}\)</span> tel que <span class="arithmatex">\(\vec{A} + (-\vec{A}) = \vec{0}\)</span></p>
+</li>
+</ul>
+<h4 id="proprietes-de-la-multiplication-par-un-scalaire">Propriétés de la Multiplication par un Scalaire</h4>
+<ul>
+<li>
+<p>Associativité : <span class="arithmatex">\((\alpha \beta) \vec{A} = \alpha (\beta \vec{A})\)</span></p>
+</li>
+<li>
+<p>Distributivité sur les Vecteurs : <span class="arithmatex">\(\alpha (\vec{A} + \vec{B}) = \alpha \vec{A} + \alpha \vec{B}\)</span></p>
+</li>
+<li>
+<p>Distributivité sur les Scalaires : <span class="arithmatex">\((\alpha + \beta) \vec{A} = \alpha \vec{A} + \beta \vec{A}\)</span></p>
+</li>
+<li>
+<p>Élément Neutre : <span class="arithmatex">\(1 \vec{A} = \vec{A}\)</span></p>
+</li>
+</ul>
+<p>Ces propriétés permettent de manipuler les vecteurs de manière algébrique et sont essentielles pour le développement de l&rsquo;algèbre vectorielle.</p>
+<hr />
+<h2 id="5-bases-et-composantes-des-vecteurs">5. Bases et Composantes des Vecteurs</h2>
+<p>Dans un espace vectoriel, les vecteurs peuvent être exprimés en termes de <strong>bases</strong>.</p>
+<h3 id="51-base-de-lespace-vectoriel">5.1 Base de l&rsquo;Espace Vectoriel</h3>
+<p>Une <strong>base</strong> d&rsquo;un espace vectoriel <span class="arithmatex">\(\mathbb{V}\)</span> est un ensemble de vecteurs <span class="arithmatex">\(\{\vec{e}_1, \vec{e}_2, \dots, \vec{e}_n\}\)</span> linéairement indépendants qui engendrent <span class="arithmatex">\(V\)</span>. Tout vecteur <span class="arithmatex">\(\vec{V} \in  \mathbb{V}\)</span> peut être exprimé comme une combinaison linéaire de ces vecteurs :</p>
+<div class="arithmatex">\[
+\vec{V} = v_1 \vec{e}_1 + v_2 \vec{e}_2 + \dots + v_n \vec{e}_n
+\]</div>
+<p>où <span class="arithmatex">\(v_i \in \mathbb{R}\)</span> (ce sont des scalaires) sont les <strong>composantes</strong> du vecteur <span class="arithmatex">\(\vec{V}\)</span> dans la base choisie.</p>
+<h3 id="52-base-orthonormee">5.2 Base orthonormée</h3>
+<p>Pour faciliter les calculs et les projections, on utilise fréquemment une <strong>base orthonormée</strong>, constituée de vecteurs unitaires orthogonaux. Dans une base orthonormée, les vecteurs unitaires <span class="arithmatex">\(\{\vec{i}, \vec{j}, \vec{k}\}\)</span> sont perpendiculaires entre eux :</p>
+<div class="arithmatex">\[
+\vec{i} \perp \vec{j} \perp \vec{k}
+\]</div>
+<p>Le <strong>produit scalaire</strong> entre deux vecteurs unitaires différents est nul, car ils sont perpendiculaires :</p>
+<div class="arithmatex">\[
+\vec{i} \cdot \vec{j} = \vec{j} \cdot \vec{k} = \vec{k} \cdot \vec{i} = 0
+\]</div>
+<p>Ces propriétés simplifient les calculs en mécanique, car elles permettent d&rsquo;isoler les contributions des vecteurs le long de chaque axe indépendamment.</p>
+<hr />
+<h2 id="6-formules-usuelles">6. Formules usuelles</h2>
+<p>En mécanique, la trigonométrie est essentielle pour déterminer des inconnues, réaliser des projections et poser correctement les problèmes. Un théorème fondamental est le <strong>théorème d’Al-Kashi</strong> (généralisation du théorème de Pythagore), qui permet de relier les longueurs des côtés et les angles dans un triangle.</p>
+<p><a class="glightbox" href="../images/alkashi.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="center" src="../images/alkashi.svg" /></a></p>
+<p>Si l’on considère un triangle avec les côtés <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(B\)</span>, et <span class="arithmatex">\(C\)</span> opposés respectivement aux angles <span class="arithmatex">\(\alpha\)</span>, <span class="arithmatex">\(\beta\)</span>, et <span class="arithmatex">\(\gamma\)</span>, on peut écrire :</p>
+<div class="arithmatex">\[
+C^2 = A^2 + B^2 - 2AB \cos(\gamma)
+\]</div>
+<div class="arithmatex">\[
+B^2 = C^2 + A^2 - 2CA \cos(\beta)
+\]</div>
+<div class="arithmatex">\[
+A^2 = B^2 + C^2 - 2BC \cos(\alpha)
+\]</div>
+<h3 id="62-vecteurs-dans-r3">6.2 Vecteurs dans <span class="arithmatex">\(R^3\)</span></h3>
+<p>Les vecteurs en 3 dimensions peuvent être exprimés de différentes façon selon les situations : </p>
+<ul>
+<li>Par les composantes indépendantes (<span class="arithmatex">\(\vec{V}=(V_x, V_y, V_z)\)</span>)</li>
+<li>Par deux angles (les angles d&rsquo;azimut et d&rsquo;élévation) et une intensité </li>
+<li>Par trois angles et une intensité </li>
+</ul>
+<p>Un vecteur en 3D peut être décrit à partir de deux angles : <strong>l&rsquo;azimut</strong> <span class="arithmatex">\(\beta\)</span> et <strong>l&rsquo;élévation</strong> <span class="arithmatex">\(\alpha\)</span>.</p>
+<p><a class="glightbox" href="../images/two.angles.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="center" src="../images/two.angles.svg" /></a></p>
+<p>La projection de <span class="arithmatex">\(\vec{F}\)</span> dans le plan <span class="arithmatex">\(xy\)</span> est notée <span class="arithmatex">\(F_{xy}\)</span>, avec :</p>
+<div class="arithmatex">\[
+F_{xy} = F \cos(\alpha)
+\]</div>
+<p>La composante verticale est notée <span class="arithmatex">\(F_z\)</span>, avec :</p>
+<div class="arithmatex">\[
+F_z = F \sin(\alpha)
+\]</div>
+<p>On peut donc écrire :</p>
+<div class="arithmatex">\[
+\vec{F} = F_{xy} + F_z = F \cos(\alpha) + F \sin(\alpha)
+\]</div>
+<p>La composante <span class="arithmatex">\(F_x\)</span> dans la direction <span class="arithmatex">\(x\)</span> est donnée par :</p>
+<div class="arithmatex">\[
+F_x = F_{xy} \cos(\beta)
+\]</div>
+<p>Ici, <span class="arithmatex">\(\beta\)</span> est l’angle d’azimut, mesuré dans le plan <span class="arithmatex">\(xy\)</span>.</p>
+<hr />
+<p>Un vecteur en 3D peut également être exprimé à partir de trois angles formant les projections dans chaque direction :</p>
+<div class="arithmatex">\[
+F_x = F \cos(\Psi), \quad F_y = F \cos(\Phi), \quad F_z = F \cos(\theta)
+\]</div>
+<p>où <span class="arithmatex">\(\Psi\)</span>, <span class="arithmatex">\(\Phi\)</span>, et <span class="arithmatex">\(\theta\)</span> sont les angles formés entre le vecteur <span class="arithmatex">\(\vec{F}\)</span> et les axes <span class="arithmatex">\(x\)</span>, <span class="arithmatex">\(y\)</span>, et <span class="arithmatex">\(z\)</span> respectivement.</p>
+<hr />
+<h3 id="vecteur-position">Vecteur Position</h3>
+<p>En mécanique, un objet peut être modélisé comme un point grâce à un <strong>vecteur position</strong> qui décrit sa localisation par rapport à une base donnée. Ce vecteur position relie un point d’origine (comme le point <span class="arithmatex">\(O\)</span>) au point <span class="arithmatex">\(A\)</span>, et se note <span class="arithmatex">\(\vec{OA} = (x_a, y_a, z_a)\)</span>.</p>
+<p>La position d’un point peut aussi être relative à un autre point. Par exemple, pour obtenir le vecteur <span class="arithmatex">\(\vec{AB}\)</span> reliant deux points <span class="arithmatex">\(A\)</span> et <span class="arithmatex">\(B\)</span>, on utilise la relation suivante :</p>
+<div class="arithmatex">\[
+\vec{AB} = \vec{OB} - \vec{OA}
+\]</div>
+<p>Cette formulation permet de poser les bases pour l&rsquo;étude des <strong>forces</strong> en mécanique, où les vecteurs position sont essentiels pour modéliser et analyser les interactions entre les objets.</p>
+
+
+<!-- Last updated date -->
+
+<hr />
+<div class="md-source-date">
+  <small>
+    
+      Auteur :  Jules Topart - 
+    
+    <!-- mkdocs-git-revision-date-localized-plugin -->
+    
+      Dernière mise à jour: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">21 janvier 2025</span>
+
+      
+
+    <!-- mkdocs-git-revision-date-plugin -->
+    
+  </small>
+</div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="../0.intro/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Introduction">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                Introduction
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../2.static/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Chapitre II : Analyse statique">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              <div class="md-ellipsis">
+                Chapitre II : Analyse statique
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright 2021 - Unilasalle Amiens - Creative Commons Attribution Non Commercial
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.tabs", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "search.suggest", "navigation.footer", "navigation.top", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../../js/mkdocs-charts-plugin.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+      
+        <script src="../../theme/p5.min.js"></script>
+      
+        <script src="../../theme/p5.fillGradient.js"></script>
+      
+        <script src="../../theme/config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/function-plot/dist/function-plot.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/1.5.2/math.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

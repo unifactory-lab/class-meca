@@ -1,0 +1,1427 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Bienvenue sur le site dédié au cours de mécanique d'UniLaSalle Amiens.">
+      
+      
+        <meta name="author" content="Jules Topart">
+      
+      
+        <link rel="canonical" href="https://unifactory-lab.github.io/class-meca/class/2.static/">
+      
+      
+        <link rel="prev" href="../1.vectors/">
+      
+      
+        <link rel="next" href="../sos/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Chapitre II : Analyse statique - Cours de Mécanique</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=indivisa:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"indivisa";--md-code-font:"Ubuntu Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/neoteroi-mkdocs.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/pseudo-code.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="unilasalle" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapitre-ii-analyse-statique" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+    <nav class="md-header__inner md-grid" aria-label="header.title">
+        <a href="../.." title="Cours de Mécanique"
+            class="md-header__button md-logo" aria-label="Cours de Mécanique" data-md-component="logo">
+            
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 22a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-6v7L9.5 7.5 7 9V2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12Z"/></svg>
+
+        </a>
+        <label class="md-header__button md-icon" for="__drawer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+        </label>
+
+        <img class="unilogo" src="https://unifactory-lab.github.io/class-meca/images/logo-unilasalle-white.png">
+
+        <div class="md-header__title" data-md-component="header-title">
+            <div class="md-header__ellipsis">
+                <div class="md-header__topic">
+                    <span class="md-ellipsis">
+                        Cours de Mécanique
+                    </span>
+                </div>
+                <div class="md-header__topic" data-md-component="header-topic">
+                    <span class="md-ellipsis">
+                        
+                        Chapitre II : Analyse statique
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <form class="md-header__option" data-md-component="palette">
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="unilasalle"
+                data-md-color-primary="" data-md-color-accent="" 
+                aria-label="Switch to dark mode"  type="radio"
+                name="__palette" id="__palette_1">
+            
+            <label class="md-header__button md-icon" title="Switch to dark mode"
+                for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+            
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate"
+                data-md-color-primary="" data-md-color-accent="" 
+                aria-label="Switch to light mode"  type="radio"
+                name="__palette" id="__palette_2">
+            
+            <label class="md-header__button md-icon" title="Switch to light mode"
+                for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+            
+            
+        </form>
+        
+        
+        
+        
+        <div class="md-header__source">
+            <a href="https://github.com/unifactory-lab/class-meca/" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    meca
+  </div>
+</a>
+        </div>
+        
+    </nav>
+    
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../.." class="md-tabs__link">
+          
+  
+    
+  
+  Accueil
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../exo/" class="md-tabs__link">
+          
+  
+    
+  
+  Exercices
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Cours de Mécanique" class="md-nav__button md-logo" aria-label="Cours de Mécanique" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 22a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-6v7L9.5 7.5 7 9V2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12Z"/></svg>
+
+    </a>
+    Cours de Mécanique
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/unifactory-lab/class-meca/" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    meca
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Accueil
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0.intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.vectors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre I : Mathématiques de Base pour le Mécanicien Amateur
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Chapitre II : Analyse statique
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre II : Analyse statique
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-les-forces" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Les forces
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Les forces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#12-actions-mecaniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Actions mécaniques
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-proprietes-vectoriel-des-forces" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Propriétés vectoriel des forces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-hypothese-des-solides-indeformables" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Hypothèse des solides indéformables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-le-moment" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Le moment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Le moment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-definition-du-moment-scalaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Définition du moment scalaire
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-theoreme-de-varignon" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Théorème de Varignon
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-le-moment-vecteur-dans-lespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Le moment vecteur dans l&rsquo;espace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-decomposition-du-moment-sur-les-axes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Décomposition du moment sur les axes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-resultantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Résultantes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21-forces-concurrentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Forces concurrentes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-forces-paralleles" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Forces parallèles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-systeme-quelquonque" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Système quelquonque
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Système quelquonque">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-de-forces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types de forces :
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-le-contact" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Le contact
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Le contact">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemples-de-forces-de-contact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples de forces de contact :
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-principe-fondamental-de-la-statique" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Principe fondamental de la statique
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Résumé de cours
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../exo/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Exercices
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Exercices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Travaux pratiques
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Travaux pratiques
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exo/tp1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP 1 : Prise en main de 3DExperience
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exo/tp2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP 2 : Conception et dimensionnement d&rsquo;une Balance romaine
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exo/tp.rdm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP 3 : Simulation FEM d&rsquo;une poutre IPN en acier galvanisé
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-les-forces" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Les forces
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Les forces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#12-actions-mecaniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Actions mécaniques
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-proprietes-vectoriel-des-forces" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Propriétés vectoriel des forces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-hypothese-des-solides-indeformables" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Hypothèse des solides indéformables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-le-moment" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Le moment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Le moment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-definition-du-moment-scalaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Définition du moment scalaire
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-theoreme-de-varignon" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Théorème de Varignon
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-le-moment-vecteur-dans-lespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Le moment vecteur dans l&rsquo;espace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-decomposition-du-moment-sur-les-axes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Décomposition du moment sur les axes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-resultantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Résultantes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21-forces-concurrentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Forces concurrentes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-forces-paralleles" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Forces parallèles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-systeme-quelquonque" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Système quelquonque
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Système quelquonque">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-de-forces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types de forces :
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-le-contact" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Le contact
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Le contact">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemples-de-forces-de-contact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples de forces de contact :
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-principe-fondamental-de-la-statique" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Principe fondamental de la statique
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="chapitre-ii-analyse-statique">Chapitre II : Analyse statique</h1>
+<p>En analyse statique, on étudie les corps au repos ou en mouvement à vitesse constante, autrement dit, les corps soumis à un équilibre des forces. Dans un système statique, la somme des forces et des moments est nulle, ce qui signifie que le corps ne subit aucune accélération.</p>
+<p>Les forces appliquées sur un objet au repos peuvent être de différentes natures : poids, forces de contact, forces de tension, et forces de frottement. L&rsquo;objectif est d&rsquo;analyser ces forces pour garantir la stabilité des structures, essentiel dans les domaines de l’ingénierie et de la conception.</p>
+<h2 id="1-les-forces">1. Les forces</h2>
+<p>La <strong>force</strong> est une grandeur vectorielle représentée par un vecteur (trois caractéristiques) :</p>
+<ul>
+<li><strong>Direction</strong> : la ligne d’action de la force.</li>
+<li><strong>Sens</strong> : vers où la force est dirigée.</li>
+<li><strong>Intensité</strong> : la magnitude de la force, mesurée en Newtons (N, daN, &hellip;).</li>
+</ul>
+<div class="admonition quote">
+<p class="admonition-title">In english please !</p>
+<p><strong>Force Vector</strong>: A vector quantity with magnitude, direction, and sense, measured in newtons (N).</p>
+</div>
+<p>Dans le contexte de la statique, chaque force appliquée sur un objet doit être équilibrée par d&rsquo;autres forces pour maintenir cet objet en repos. Par exemple, un livre posé sur une table est soumis à deux forces : son poids (vers le bas) et une force de réaction de la table (vers le haut).</p>
+<h3 id="12-actions-mecaniques">1.2 Actions mécaniques</h3>
+<p>Les actions mécaniques regroupent l’ensemble des forces appliquées à un système étudié. Elles sont classées en deux grandes catégories : les <strong>actions à distance</strong> et les <strong>actions de contact</strong>. Ces actions influencent le comportement d&rsquo;un objet et son équilibre, et leur modélisation est cruciale pour les analyses statiques et dynamiques.</p>
+<p>Les actions à distance sont des forces exercées sur un objet sans contact direct avec celui-ci. Elles résultent d’interactions de champ, où une force est appliquée sur l&rsquo;ensemble du volume ou de la masse d&rsquo;un solide.</p>
+<p><strong>Poids (Force de gravité)</strong> : Le poids est une force à distance exercée par la Terre sur tout objet ayant une masse. Sa direction est verticale, orientée vers le centre de la Terre.</p>
+<div class="arithmatex">\[
+\vec{P} = m \cdot \vec{g}
+\]</div>
+<p>où :</p>
+<ul>
+<li><span class="arithmatex">\( m \)</span> est la masse de l&rsquo;objet (en kg),</li>
+<li><span class="arithmatex">\( \vec{g} \)</span> est le vecteur d&rsquo;accélération gravitationnelle (<span class="arithmatex">\( g \approx 9,81 \, \text{m/s}^2 \)</span>).</li>
+</ul>
+<p><strong>Forces électromagnétiques</strong> : Les forces électromagnétiques s’exercent sur des particules chargées, comme les électrons et les protons. En mécanique classique, elles sont moins courantes pour les solides macroscopiques, mais elles peuvent jouer un rôle dans les objets conducteurs.</p>
+<hr />
+<p>Les actions de contact résultent de l’interaction directe entre deux objets. Elles nécessitent un point ou une surface de contact et sont classées selon la géométrie et la nature du contact.</p>
+<p><strong>Action de contact ponctuelle</strong> : Il s’agit d’une force exercée en un point spécifique d&rsquo;un solide, comme le point de contact entre une bille et une surface plane. La force est modélisée par un vecteur appliqué en ce point.</p>
+<p><a class="glightbox" href="../images/chap2/action.point.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="center" src="../images/chap2/action.point.svg" /></a></p>
+<div class="arithmatex">\[
+\vec{F} = F \cdot \vec{u}
+\]</div>
+<p>où :</p>
+<ul>
+<li><span class="arithmatex">\( F \)</span> est l&rsquo;intensité de la force,</li>
+<li><span class="arithmatex">\( \vec{u} \)</span> est le vecteur unitaire dans la direction de la force.</li>
+</ul>
+<p><strong>Action de contact linéique</strong> : Cette force est appliquée le long d’une ligne de contact, comme une corde tendue ou le bord d’une surface en appui. La force linéique est souvent exprimée par une densité de force par unité de longueur, <span class="arithmatex">\( f_L \)</span>, et appliquée le long de la ligne de contact.</p>
+<p><a class="glightbox" href="../images/chap2/action.line.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="center" src="../images/chap2/action.line.svg" /></a></p>
+<div class="arithmatex">\[
+\vec{F}_L = f_L \cdot L \cdot \vec{u}
+\]</div>
+<p>où :</p>
+<ul>
+<li><span class="arithmatex">\( \vec{F_L} \)</span> est la force contact linéique (N),</li>
+<li><span class="arithmatex">\( f_L \)</span> est la force linéique (en N/m),</li>
+<li><span class="arithmatex">\( L \)</span> est la longueur du contact.</li>
+</ul>
+<p><strong>Pression superficielle</strong> : Lorsqu’une force est distribuée sur une surface, elle est décrite par une pression, exprimée en force par unité de surface. Par exemple, la pression appliquée par un fluide sur les parois d’un réservoir ou la pression entre une semelle de chaussure et le sol.</p>
+<p><a class="glightbox" href="../images/chap2/action.surface.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="center" src="../images/chap2/action.surface.svg" /></a></p>
+<div class="arithmatex">\[
+\vec{F}_S = p \cdot A \cdot \vec{n}
+\]</div>
+<p>où :</p>
+<ul>
+<li><span class="arithmatex">\( \vec{F_s} \)</span> est la force de pression (N),</li>
+<li><span class="arithmatex">\( p \)</span> est la pression (en Pa ou N/m²),</li>
+<li><span class="arithmatex">\( A \)</span> est l&rsquo;aire de la surface de contact,</li>
+<li><span class="arithmatex">\( \vec{n} \)</span> est le vecteur normal à la surface.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Exercice</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Question</label><label for="__tabbed_1_2">Solution</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Considérons un vérin pneumatique muni d&rsquo;un piston de diamètre <span class="arithmatex">\(10cm\)</span>. On applique une pression de 100 bar dans la chambre du piston. Quelle force est développée par le vérin ?</p>
+</div>
+<div class="tabbed-block">
+<div class="arithmatex">\[
+\vec{R} = p S = p \frac{\pi d^2}{4} = p \pi r^2
+\]</div>
+<p>Le vérin développe 7854 daN de force.</p>
+</div>
+</div>
+</div>
+</div>
+<p>Les liaisons mécaniques créent des interactions de contact qui limitent les degrés de liberté d’un solide en fonction de son environnement. Selon le type de liaison, la nature et la direction des forces varient. Nous étudierons ces actions spécifique plus tard dans le cours.</p>
+<h3 id="13-proprietes-vectoriel-des-forces">1.3 Propriétés vectoriel des forces</h3>
+<p>Les forces étant représentée grâce à des vecteurs, il est possible d&rsquo;utiliser toutes les propriétés de l&rsquo;analyse vectorielle pour résoudre des problèmes en mécanique. 
+Ainsi à titre d&rsquo;exemple, les forces s&rsquo;exerçant sur un solide peuvent être décomposer en plusieurs composantes de leur base.</p>
+<p><a class="glightbox" href="../images/chap2/anchor.cable.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="center" src="../images/chap2/anchor.cable.svg" /></a></p>
+<p>Dans l&rsquo;exemple ci-dessus, il est possible d&rsquo;obtenir la composante de <span class="arithmatex">\(\vec{F}\)</span> selon <span class="arithmatex">\(\vec{x}\)</span> en effectuant une projection.</p>
+<div class="arithmatex">\[
+F_x = ||\vec{F}|| \cdot cos(30°)
+\]</div>
+<p><a class="glightbox" href="../images/chap2/anchor.cable.simplified.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="center" src="../images/chap2/anchor.cable.simplified.svg" /></a></p>
+<h3 id="14-hypothese-des-solides-indeformables">1.4 Hypothèse des solides indéformables</h3>
+<p>Dans l’étude des systèmes mécaniques, on adopte souvent l’hypothèse que les solides sont <strong>indéformables</strong>, c&rsquo;est-à-dire qu&rsquo;ils conservent leur forme et leur volume sous l&rsquo;effet des forces appliquées. Cette hypothèse simplificatrice implique que les distances entre les points d’un solide restent constantes, même lorsqu&rsquo;il est soumis à des charges externes. Cela signifie que, quel que soit l’endroit où une force est appliquée, le solide ne subit ni étirement, ni compression, ni torsion, ni flexion.</p>
+<p>L&rsquo;hypothèse des solides indéformables est particulièrement adaptée aux structures rigides et aux mécanismes de petite échelle où les déformations sont négligeables par rapport aux dimensions de l’objet. Par exemple, pour les pièces en métal d&rsquo;un châssis de voiture ou d&rsquo;une structure métallique, les déformations sous charge modérée peuvent être assez petites pour justifier cette hypothèse.</p>
+<h2 id="2-le-moment">2. Le moment</h2>
+<p>Les forces qui agissent sur un solide peuvent engendrer un moment. Le moment décrit la composante d&rsquo;une force qui tend à faire tourner un objet. Ce concept est souvent associé au bras de levier, qui mesure la distance perpendiculaire entre la ligne d&rsquo;action de la force et le point autour duquel la rotation s&rsquo;effectue.</p>
+<p>Si le moment causé par une force est nul, alors la force n&rsquo;a aucune influence sur la rotation de l&rsquo;objet autour du point considéré. Dans le cas contraire, l&rsquo;objet subira une rotation autour d&rsquo;un axe défini par le vecteur moment.
+S
+<a class="glightbox" href="../images/wrench.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="center" src="../images/wrench.svg" /></a></p>
+<p>Des exemples concrets incluent l&rsquo;utilisation d&rsquo;une clé pour serrer un boulon, où le bras de levier (distance) et l&rsquo;intensité de la force déterminent le moment généré.</p>
+<h3 id="21-definition-du-moment-scalaire">2.1 Définition du moment scalaire</h3>
+<p>Pour une force <span class="arithmatex">\(\vec{F}\)</span> appliquée à un point <span class="arithmatex">\(B\)</span> par rapport à un point <span class="arithmatex">\(A\)</span>, le moment scalaire <span class="arithmatex">\(M_A(\vec{F})\)</span> est donné par :</p>
+<div class="arithmatex">\[
+M_A(\vec{F}) = F \cdot d
+\]</div>
+<p>où :</p>
+<ul>
+<li><span class="arithmatex">\(F\)</span> est l&rsquo;intensité de la force,</li>
+<li><span class="arithmatex">\(d\)</span> est la distance perpendiculaire entre <span class="arithmatex">\(A\)</span> et la ligne d&rsquo;action de la force.</li>
+</ul>
+<hr />
+<p><a class="glightbox" href="../images/torque.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="center" src="../images/torque.svg" /></a></p>
+<hr />
+<h3 id="22-theoreme-de-varignon">2.2 Théorème de Varignon</h3>
+<p>Le moment d&rsquo;une force par rapport à un point est égal à la somme des moments des composantes de cette force par rapport au même point. Ceci est exprimé par le théorème de Varignon :</p>
+<div class="arithmatex">\[
+M_A(\vec{F}) = M_A(\vec{U}) + M_A(\vec{V})
+\]</div>
+<p>où <span class="arithmatex">\(\vec{F} = \vec{U} + \vec{V}\)</span>, avec <span class="arithmatex">\(\vec{U}\)</span> et <span class="arithmatex">\(\vec{V}\)</span> les composantes de <span class="arithmatex">\(\vec{F}\)</span>.</p>
+<h3 id="23-le-moment-vecteur-dans-lespace">2.3 Le moment vecteur dans l&rsquo;espace</h3>
+<p>En statique ou en dynamique, lorsque le problème se déroule dans l&rsquo;espace, un moment scalaire ne suffit plus. On décrit alors le moment comme un vecteur de rotation. Le moment d&rsquo;une force <span class="arithmatex">\(\vec{F}\)</span> appliquée au point <span class="arithmatex">\(B\)</span> par rapport au point <span class="arithmatex">\(A\)</span> est donné par :</p>
+<div class="arithmatex">\[
+\vec{M_A(F)} = \vec{AB} \wedge \vec{F}
+\]</div>
+<p>où <span class="arithmatex">\(\wedge\)</span> représente le produit vectoriel. On note que cette relation respecte l&rsquo;antisimétrie suivante :</p>
+<div class="arithmatex">\[
+\vec{AB} \wedge \vec{F} = - (\vec{F} \wedge \vec{AB})
+\]</div>
+<h3 id="24-decomposition-du-moment-sur-les-axes">2.4 Décomposition du moment sur les axes</h3>
+<p>Les composantes du vecteur moment peuvent être décomposées sur les trois axes de rotation (<span class="arithmatex">\(\vec{i}\)</span>, <span class="arithmatex">\(\vec{j}\)</span>, <span class="arithmatex">\(\vec{k}\)</span>) du repère choisi. Cette décomposition est donnée par :</p>
+<div class="arithmatex">\[
+\vec{M_0(F)} = (r_y F_z - r_z F_y) \vec{i} + (r_z F_x - r_x F_z) \vec{j} + (r_x F_y - r_y F_x) \vec{k}
+\]</div>
+<p>où :</p>
+<ul>
+<li><span class="arithmatex">\((r_x, r_y, r_z)\)</span> sont les coordonnées du vecteur position <span class="arithmatex">\(\vec{AB}\)</span>,</li>
+<li><span class="arithmatex">\((F_x, F_y, F_z)\)</span> sont les composantes de la force <span class="arithmatex">\(\vec{F}\)</span>.</li>
+</ul>
+<h3 id="3-resultantes">3. Résultantes</h3>
+<p>En statique et en dynamique, il est souvent nécessaire de simplifier l’analyse en regroupant toutes les forces appliquées sur un solide sous forme d’une <strong>force résultante</strong> et d&rsquo;un <strong>moment résultant</strong>. La force résultante est un vecteur unique qui a le même effet global que l’ensemble des forces individuelles appliquées sur l’objet. Elle résume l’influence de toutes les forces en une seule force appliquée en un point particulier du solide, souvent choisi comme le centre de gravité. Le moment résultant à lui, le même effet que l&rsquo;ensemble des moments engendré par les forces s&rsquo;appliquant au solide.</p>
+<p>En effet, puisque le solide est indeformable (hypothèse 1.1), il est possible de décrire les forces qui s&rsquo;exercent sur celui si en tout point du solide à l&rsquo;aide d&rsquo;une force et d&rsquo;un moment.</p>
+<p>La détermination de la force résultante est essentielle pour l’analyse statique, car elle permet de simplifier les calculs en réduisant plusieurs forces à une seule; d&rsquo;évaluer l’équilibre statique d’un objet et enfin d&rsquo;analyser les effets combinés de plusieurs forces avec une approche vectorielle, en tenant compte des directions et des intensités de chaque force.</p>
+<p>La force résultante <span class="arithmatex">\( \vec{R} \)</span> est obtenue en additionnant vectoriellement toutes les forces appliquées sur l&rsquo;objet. Mathématiquement, si un solide est soumis à <span class="arithmatex">\( n \)</span> forces <span class="arithmatex">\( \vec{F_1}, \vec{F_2}, ..., \vec{F_n} \)</span>, la force résultante s&rsquo;exprime par :</p>
+<div class="arithmatex">\[
+\vec{R} = \sum_{i=1}^{n} \vec{F_i}
+\]</div>
+<p>Cette addition vectorielle tient compte non seulement de la magnitude de chaque force, mais aussi de leur direction et de leur point d&rsquo;application relatif. Dans le cas de forces colinéaires, la résultante est simplement la somme algébrique de leurs intensités, dans leur direction commune.</p>
+<h3 id="21-forces-concurrentes">2.1 Forces concurrentes</h3>
+<p>Lorsque plusieurs forces convergent vers un même point, on peut les additionner directement pour déterminer la force résultante. Par exemple, si trois câbles appliquent des forces à un même point sur une structure, on peut calculer la force résultante en additionnant les vecteurs des forces de chaque câble.</p>
+<p><a class="glightbox" href="../images/chap2/force.concour.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/chap2/force.concour.svg" /></a></p>
+<h3 id="22-forces-paralleles">2.2 Forces parallèles</h3>
+<p>Pour des forces parallèles appliquées sur un solide, la force résultante est la somme vectorielle des forces, mais le point d&rsquo;application de la résultante dépend de la répartition des forces et de leurs distances par rapport à un point de référence.</p>
+<p><a class="glightbox" href="../images/chap2/force.para.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/chap2/force.para.svg" /></a></p>
+<h3 id="33-systeme-quelquonque">3.3 Système quelquonque</h3>
+<p><a class="glightbox" href="../images/chap2/force.quel.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/chap2/force.quel.svg" /></a></p>
+<h4 id="types-de-forces">Types de forces :</h4>
+<ul>
+<li><strong>Poids</strong> : La force exercée par la gravité sur un objet, dirigée vers le centre de la Terre. Sa magnitude est donnée par <span class="arithmatex">\( P = m \cdot g \)</span>, où <span class="arithmatex">\( m \)</span> est la masse de l&rsquo;objet et <span class="arithmatex">\( g \approx 9,81 \, \text{m/s}^2 \)</span>.</li>
+<li><strong>Force normale</strong> : La force de réaction exercée perpendiculairement par une surface sur un objet en contact.</li>
+<li><strong>Force de frottement</strong> : Force opposant le mouvement relatif entre deux surfaces en contact.</li>
+<li><strong>Force de tension</strong> : Force transmise par un câble, une corde ou une chaîne tirant sur un objet.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Exercice</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Question</label><label for="__tabbed_2_2">Solution</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Un objet de 5 kg est posé sur une surface plane. Calculez le poids de cet objet et identifiez les forces en équilibre.</p>
+</div>
+<div class="tabbed-block">
+<p>Le poids est donné par <span class="arithmatex">\( P = m \cdot g \)</span> :</p>
+<div class="arithmatex">\[
+P = 5 \, \text{kg} \times 9,81 \, \text{m/s}^2 = 49,05 \, \text{N}
+\]</div>
+<p>Les forces en équilibre sont le poids (vers le bas) et la force normale de la surface (vers le haut), de même intensité que le poids.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Les tips de top-top</p>
+<p>Il est courant d&rsquo;utiliser le daN comme unité pour décrire un poids. En effet, le champ de pesanteur <span class="arithmatex">\(g \approx 10 m.s^{-2}\)</span> ce qui signifie qu&rsquo;un objet de 200kg possède un poids d&rsquo;environ 200 daN. Évidemment il est parfois neccessaire d&rsquo;utiliser les valeurs exact du poids d&rsquo;un objet, lorsque l&rsquo;on étudie l&rsquo;équilibre d&rsquo;une balance par exemple.</p>
+</div>
+<h3 id="2-le-contact">2. Le contact</h3>
+<p>Lorsque deux objets sont en contact, ils exercent des forces l&rsquo;un sur l&rsquo;autre. En mécanique, ces forces sont rarement concentrées en un seul point, car chaque objet a une certaine surface de contact, même à l&rsquo;échelle microscopique.</p>
+<p>La <strong>pression</strong> est la mesure de la force exercée par unité de surface. Elle est particulièrement importante dans les contacts solides, car elle détermine comment les matériaux réagissent aux forces appliquées, affectant la stabilité et la résistance des structures.</p>
+<div class="arithmatex">\[
+\text{Pression} = \frac{\text{Force}}{\text{Surface}} \quad \text{en Pascal (Pa)}
+\]</div>
+<div class="admonition quote">
+<p class="admonition-title">In english please !</p>
+<p><strong>Pressure</strong>: The amount of force per unit area exerted on a surface, measured in pascals (Pa).</p>
+</div>
+<h4 id="exemples-de-forces-de-contact">Exemples de forces de contact :</h4>
+<ul>
+<li><strong>Force de frottement</strong> : Oppose le mouvement entre deux surfaces en contact.</li>
+<li><strong>Force de compression</strong> : Agit sur un objet pour le comprimer.</li>
+<li><strong>Force de traction</strong> : Tente d’étirer un objet en le tirant.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Exercice</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Question</label><label for="__tabbed_3_2">Solution</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Une force de 200 N est appliquée perpendiculairement sur une surface de 0,1 m². Calculez la pression exercée sur cette surface.</p>
+</div>
+<div class="tabbed-block">
+<p>La pression est calculée par <span class="arithmatex">\( P = \frac{F}{A} \)</span> :</p>
+<div class="arithmatex">\[
+P = \frac{200 \, \text{N}}{0,1 \, \text{m}^2} = 2000 \, \text{Pa}
+\]</div>
+</div>
+</div>
+</div>
+</div>
+<h2 id="5-principe-fondamental-de-la-statique">5. Principe fondamental de la statique</h2>
+<p>somme des force
+somme des moments</p>
+
+
+<!-- Last updated date -->
+
+<hr />
+<div class="md-source-date">
+  <small>
+    
+      Auteur :  Jules Topart - 
+    
+    <!-- mkdocs-git-revision-date-localized-plugin -->
+    
+      Dernière mise à jour: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">21 janvier 2025</span>
+
+      
+
+    <!-- mkdocs-git-revision-date-plugin -->
+    
+  </small>
+</div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="../1.vectors/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Chapitre I : Mathématiques de Base pour le Mécanicien Amateur">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                Chapitre I : Mathématiques de Base pour le Mécanicien Amateur
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../sos/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Résumé de cours">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              <div class="md-ellipsis">
+                Résumé de cours
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright 2021 - Unilasalle Amiens - Creative Commons Attribution Non Commercial
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.tabs", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "search.suggest", "navigation.footer", "navigation.top", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../../js/mkdocs-charts-plugin.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+      
+        <script src="../../theme/p5.min.js"></script>
+      
+        <script src="../../theme/p5.fillGradient.js"></script>
+      
+        <script src="../../theme/config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/function-plot/dist/function-plot.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/1.5.2/math.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

@@ -1,0 +1,1336 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Bienvenue sur le site dédié au cours de mécanique d'UniLaSalle Amiens.">
+      
+      
+        <meta name="author" content="Jules Topart">
+      
+      
+        <link rel="canonical" href="https://unifactory-lab.github.io/class-meca/exo/tp1/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../tp2/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>TP 1 : Prise en main de 3DExperience - Cours de Mécanique</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=indivisa:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"indivisa";--md-code-font:"Ubuntu Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/neoteroi-mkdocs.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/pseudo-code.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="unilasalle" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tp-1-prise-en-main-de-3dexperience" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+    <nav class="md-header__inner md-grid" aria-label="header.title">
+        <a href="../.." title="Cours de Mécanique"
+            class="md-header__button md-logo" aria-label="Cours de Mécanique" data-md-component="logo">
+            
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 22a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-6v7L9.5 7.5 7 9V2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12Z"/></svg>
+
+        </a>
+        <label class="md-header__button md-icon" for="__drawer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+        </label>
+
+        <img class="unilogo" src="https://unifactory-lab.github.io/class-meca/images/logo-unilasalle-white.png">
+
+        <div class="md-header__title" data-md-component="header-title">
+            <div class="md-header__ellipsis">
+                <div class="md-header__topic">
+                    <span class="md-ellipsis">
+                        Cours de Mécanique
+                    </span>
+                </div>
+                <div class="md-header__topic" data-md-component="header-topic">
+                    <span class="md-ellipsis">
+                        
+                        TP 1 : Prise en main de 3DExperience
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <form class="md-header__option" data-md-component="palette">
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="unilasalle"
+                data-md-color-primary="" data-md-color-accent="" 
+                aria-label="Switch to dark mode"  type="radio"
+                name="__palette" id="__palette_1">
+            
+            <label class="md-header__button md-icon" title="Switch to dark mode"
+                for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+            
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate"
+                data-md-color-primary="" data-md-color-accent="" 
+                aria-label="Switch to light mode"  type="radio"
+                name="__palette" id="__palette_2">
+            
+            <label class="md-header__button md-icon" title="Switch to light mode"
+                for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+            
+            
+        </form>
+        
+        
+        
+        
+        <div class="md-header__source">
+            <a href="https://github.com/unifactory-lab/class-meca/" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    meca
+  </div>
+</a>
+        </div>
+        
+    </nav>
+    
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+    
+  
+  Accueil
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  Exercices
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Cours de Mécanique" class="md-nav__button md-logo" aria-label="Cours de Mécanique" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 22a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-6v7L9.5 7.5 7 9V2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12Z"/></svg>
+
+    </a>
+    Cours de Mécanique
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/unifactory-lab/class-meca/" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    meca
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Accueil
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class/0.intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class/1.vectors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre I : Mathématiques de Base pour le Mécanicien Amateur
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class/2.static/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre II : Analyse statique
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class/sos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Résumé de cours
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Exercices
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Exercices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Travaux pratiques
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Travaux pratiques
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    TP 1 : Prise en main de 3DExperience
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    TP 1 : Prise en main de 3DExperience
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objectifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objectifs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#materiel-et-logiciel-necessaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matériel et logiciel nécessaires
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-1-decouverte-de-linterface-3dexperience" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 1 : Découverte de l&rsquo;interface 3DExperience
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Étape 1 : Découverte de l’interface 3DExperience">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-interface-principale" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Interface principale
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-gestion-des-dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Gestion des Dashboards
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-2-acceder-aux-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 2 : Accéder aux applications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Étape 2 : Accéder aux applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-le-bouton-daction-3dx" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Le bouton d&rsquo;action (3Dx)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-difference-entre-applications-locales-et-en-ligne" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Différence entre applications locales et en ligne
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-3-creation-dun-assemblage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 3 : Création d&rsquo;un assemblage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Étape 3 : Création d’un assemblage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-ouvrir-assembly-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Ouvrir Assembly Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-navigation-dans-larborescence-de-lassemblage" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Navigation dans l&rsquo;arborescence de l&rsquo;assemblage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-ajouter-une-nouvelle-piece" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Ajouter une nouvelle pièce
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-4-conception-dune-piece-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 4 : Conception d&rsquo;une pièce simple
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Étape 4 : Conception d’une pièce simple">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-ouvrir-part-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Ouvrir Part Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-dessiner-une-esquisse" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Dessiner une esquisse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-extrusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Extrusion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-5-enregistrement-du-projet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 5 : Enregistrement du projet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-5-exercice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 5 : Exercice
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tp2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP 2 : Conception et dimensionnement d&rsquo;une Balance romaine
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tp.rdm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP 3 : Simulation FEM d&rsquo;une poutre IPN en acier galvanisé
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objectifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objectifs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#materiel-et-logiciel-necessaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matériel et logiciel nécessaires
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-1-decouverte-de-linterface-3dexperience" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 1 : Découverte de l&rsquo;interface 3DExperience
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Étape 1 : Découverte de l’interface 3DExperience">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-interface-principale" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Interface principale
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-gestion-des-dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Gestion des Dashboards
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-2-acceder-aux-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 2 : Accéder aux applications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Étape 2 : Accéder aux applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-le-bouton-daction-3dx" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Le bouton d&rsquo;action (3Dx)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-difference-entre-applications-locales-et-en-ligne" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Différence entre applications locales et en ligne
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-3-creation-dun-assemblage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 3 : Création d&rsquo;un assemblage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Étape 3 : Création d’un assemblage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-ouvrir-assembly-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Ouvrir Assembly Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-navigation-dans-larborescence-de-lassemblage" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Navigation dans l&rsquo;arborescence de l&rsquo;assemblage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-ajouter-une-nouvelle-piece" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Ajouter une nouvelle pièce
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-4-conception-dune-piece-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 4 : Conception d&rsquo;une pièce simple
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Étape 4 : Conception d’une pièce simple">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-ouvrir-part-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Ouvrir Part Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-dessiner-une-esquisse" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Dessiner une esquisse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-extrusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Extrusion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-5-enregistrement-du-projet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 5 : Enregistrement du projet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-5-exercice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 5 : Exercice
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="tp-1-prise-en-main-de-3dexperience">TP 1 : Prise en main de 3DExperience</h1>
+<p><a class="glightbox" href="../images/3dx.welcome.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/3dx.welcome.jpg" /></a></p>
+<h2 id="objectifs">Objectifs</h2>
+<p>Ce tutoriel a pour objectif de guider les étudiants dans la prise en main de la plateforme 3DExperience, depuis la découverte de son interface jusqu&rsquo;à la conception d’une pièce simple intégrée dans un assemblage. Ce processus permet de comprendre les bases des outils collaboratifs et des environnements de modélisation 3D.</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Découvrir l&rsquo;interface de 3DExperience.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Naviguer dans les Dashboards et gérer les applications.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Créer un assemblage pour organiser un projet.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Concevoir une pièce simple à partir d&rsquo;une esquisse.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Enregistrer correctement un projet dans l&rsquo;espace collaboratif.</li>
+</ul>
+<hr />
+<h2 id="materiel-et-logiciel-necessaires">Matériel et logiciel nécessaires</h2>
+<ul>
+<li>Un ordinateur avec un accès à Internet.</li>
+<li>Accès à 3DExperience avec les rôles activés :</li>
+<li><strong>Collaborative Engineering Expert</strong>.</li>
+<li><strong>Collaborative Simulation Expert</strong>.</li>
+</ul>
+<hr />
+<h2 id="etape-1-decouverte-de-linterface-3dexperience">Étape 1 : Découverte de l&rsquo;interface 3DExperience</h2>
+<h3 id="11-interface-principale">1.1 Interface principale</h3>
+<p>Après vous être connecté à 3DExperience, vous accédez à la page d&rsquo;accueil, où un Dashboard par défaut vous est proposé. Cet espace contient des outils de documentation et sert de base pour personnaliser votre environnement de travail.</p>
+<p><a class="glightbox" href="../images/3dx.welcome.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/3dx.welcome.jpg" /></a></p>
+<p>Voici les éléments principaux de l&rsquo;interface, illustrés ci-dessous :</p>
+<ol>
+<li><strong>Menu des Dashboards</strong> : permet de gérer et de changer de Dashboard.</li>
+<li><strong>Bouton d&rsquo;Action (3Dx)</strong> : accès aux applications.</li>
+<li><strong>Barre de recherche</strong> : pour trouver rapidement des projets ou des apps.</li>
+<li><strong>Profil utilisateur</strong> : gestion des préférences et des paramètres.</li>
+<li><strong>Communautés (3DSwym)</strong> et autres fonctionnalités collaboratives.</li>
+</ol>
+<p><a class="glightbox" href="../images/3dx.welcome.notes.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/3dx.welcome.notes.jpg" /></a></p>
+<h3 id="12-gestion-des-dashboards">1.2 Gestion des Dashboards</h3>
+<p>Les Dashboards sont utiles pour organiser vos projets et outils. Cliquez sur le <strong>menu des Dashboards</strong> pour en gérer le contenu ou basculer entre plusieurs tableaux de bord.</p>
+<p><a class="glightbox" href="../images/3dx.dashboard.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/3dx.dashboard.jpg" /></a></p>
+<div class="admonition info conseil">
+<p class="admonition-title">Info</p>
+<p>En entreprise, il est fréquent d’avoir un Dashboard pour chaque projet ou rôle. Vous pourriez, par exemple, dédier un tableau aux conceptions mécaniques et un autre aux simulations.</p>
+</div>
+<hr />
+<h2 id="etape-2-acceder-aux-applications">Étape 2 : Accéder aux applications</h2>
+<h3 id="21-le-bouton-daction-3dx">2.1 Le bouton d&rsquo;action (3Dx)</h3>
+<p>Le bouton <strong>3Dx</strong> en haut à gauche de l&rsquo;écran donne accès à toutes les applications de 3DExperience. Vous pouvez rechercher une application ou l’ajouter à vos favoris pour un accès rapide. Par exemple, <strong>Assembly Design</strong> et <strong>Part Design</strong> sont souvent utilisés ensemble dans des projets de conception mécanique.</p>
+<p><a class="glightbox" href="../images/3dx.apps.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/3dx.apps.jpg" /></a></p>
+<h3 id="22-difference-entre-applications-locales-et-en-ligne">2.2 Différence entre applications locales et en ligne</h3>
+<p>Certaines applications, comme <strong>Assembly Design</strong>, s’exécutent localement pour des performances optimales, tandis que d’autres fonctionnent directement dans le navigateur. Voici une capture montrant une application locale. Bien que l&rsquo;interface soit similaire, on remarque sur l&rsquo;image ci-dessous l&rsquo;ajout de la barre de menu Windows.</p>
+<p><a class="glightbox" href="../images/3dx.app.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/3dx.app.jpg" /></a></p>
+<hr />
+<h2 id="etape-3-creation-dun-assemblage">Étape 3 : Création d&rsquo;un assemblage</h2>
+<h3 id="31-ouvrir-assembly-design">3.1 Ouvrir Assembly Design</h3>
+<p>Cliquez sur l’application <strong>Assembly Design</strong> pour ouvrir l’environnement dédié aux assemblages.</p>
+<p><a class="glightbox" href="./images/AD.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="./images/AD.jpg" /></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Bien que <strong>Part Design</strong> puisse suffire pour concevoir une pièce unique, les projets industriels impliquent presque toujours des assemblages. 
+Commencer un projet en utilisant <strong>Assembly Design</strong> permet d’organiser directement toutes les pièces dans un même fichier, ce qui évite l’importation laborieuse de chaque composant par la suite. Dans un contexte professionnel, la conception d’assemblages est la norme. Cela facilite la gestion des relations entre pièces et l’analyse structurelle. Une bonne pratique consiste à créer toutes les pièces directement dans l’assemblage pour garantir une organisation cohérente.</p>
+</div>
+<hr />
+<h3 id="32-navigation-dans-larborescence-de-lassemblage">3.2 Navigation dans l&rsquo;arborescence de l&rsquo;assemblage</h3>
+<p>L’arborescence (ou <strong>Navigation Tree</strong>) vous permet de gérer la structure de votre projet. Activez-la en cliquant sur la flèche grise à gauche de l’interface.</p>
+<p><a class="glightbox" href="../images/AD.tree.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/AD.tree.jpg" /></a></p>
+<hr />
+<h3 id="33-ajouter-une-nouvelle-piece">3.3 Ajouter une nouvelle pièce</h3>
+<p>Pour ajouter une nouvelle pièce dans l’assemblage :
+1. Cliquez sur <strong>Nouveau</strong> dans le menu de l’assemblage.
+2. Donnez un nom à la pièce et spécifiez son emplacement.</p>
+<p><a class="glightbox" href="../images/AD.new.part.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/AD.new.part.jpg" /></a></p>
+<p>Une fois ajoutée, la nouvelle pièce apparaît dans l’arborescence. Déployez-la pour visualiser la structure complète.</p>
+<p><a class="glightbox" href="../images/AD.part.tree.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/AD.part.tree.jpg" /></a></p>
+<hr />
+<h2 id="etape-4-conception-dune-piece-simple">Étape 4 : Conception d&rsquo;une pièce simple</h2>
+<h3 id="41-ouvrir-part-design">4.1 Ouvrir Part Design</h3>
+<p>Double-cliquez sur la pièce dans l’arborescence pour passer à l’environnement <strong>Part Design</strong>. Vous êtes maintenant prêt à modéliser la pièce.</p>
+<p><a class="glightbox" href="../images/PD.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/PD.jpg" /></a></p>
+<hr />
+<h3 id="42-dessiner-une-esquisse">4.2 Dessiner une esquisse</h3>
+<p>L’esquisse est la base de toute pièce 3D. Utilisez l’application <strong>Sketcher</strong> pour dessiner un rectangle :
+1. Sélectionnez un plan de référence, par exemple XY.
+2. Tracez un rectangle simple.</p>
+<p><a class="glightbox" href="../images/sketcher.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/sketcher.jpg" /></a><br />
+<a class="glightbox" href="../images/first.sketch.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/first.sketch.jpg" /></a></p>
+<p>Ajoutez des dimensions pour spécifier les côtés.</p>
+<p><a class="glightbox" href="../images/sketcher.cote.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/sketcher.cote.png" /></a></p>
+<p><a class="glightbox" href="../images/first.sketch.cote.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/first.sketch.cote.jpg" /></a></p>
+<p>Si l’esquisse n’est pas entièrement contrainte (côtée), ajoutez des contraintes de position pour fixer sa localisation.</p>
+<p><a class="glightbox" href="../images/first.sketch.full.cote.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/first.sketch.full.cote.jpg" /></a></p>
+<hr />
+<h3 id="43-extrusion">4.3 Extrusion</h3>
+<p>Une fois l’esquisse terminée, utilisez l’outil <strong>Extrusion</strong> pour générer un volume à partir de votre rectangle.</p>
+<p><a class="glightbox" href="../images/PD.extrusion.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/PD.extrusion.jpg" /></a></p>
+<p>Vous obtenez ainsi votre première pièce 3D.</p>
+<p><a class="glightbox" href="../images/AD.part.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/AD.part.jpg" /></a></p>
+<hr />
+<h2 id="etape-5-enregistrement-du-projet">Étape 5 : Enregistrement du projet</h2>
+<p>Avant d’enregistrer, assurez-vous de sélectionner le bon <strong>espace commun (Common Space)</strong> pour organiser vos fichiers. Enregistrez ensuite avec <strong>Ctrl + S</strong>.</p>
+<p><a class="glightbox" href="../images/saving.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/saving.png" /></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Dans un projet collaboratif, bien nommer vos fichiers et les ranger dans les espaces appropriés permet d’éviter de perdre du temps à chercher des fichiers mal organisés.</p>
+</div>
+<hr />
+<h2 id="etape-5-exercice">Étape 5 : Exercice</h2>
+<p>Réaliser la modélisation de la pièce suivante : </p>
+<p><a class="glightbox" href="../images/exercice.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/exercice.jpg" /></a></p>
+
+
+<!-- Last updated date -->
+
+<hr />
+<div class="md-source-date">
+  <small>
+    
+      Auteur :  Jules Topart - 
+    
+    <!-- mkdocs-git-revision-date-localized-plugin -->
+    
+      Dernière mise à jour: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">21 janvier 2025</span>
+
+      
+
+    <!-- mkdocs-git-revision-date-plugin -->
+    
+  </small>
+</div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Exercices">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                Exercices
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../tp2/" class="md-footer__link md-footer__link--next" aria-label="Suivant: TP 2 : Conception et dimensionnement d&amp;rsquo;une Balance romaine">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              <div class="md-ellipsis">
+                TP 2 : Conception et dimensionnement d&rsquo;une Balance romaine
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright 2021 - Unilasalle Amiens - Creative Commons Attribution Non Commercial
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.tabs", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "search.suggest", "navigation.footer", "navigation.top", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../../js/mkdocs-charts-plugin.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+      
+        <script src="../../theme/p5.min.js"></script>
+      
+        <script src="../../theme/p5.fillGradient.js"></script>
+      
+        <script src="../../theme/config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/function-plot/dist/function-plot.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/1.5.2/math.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

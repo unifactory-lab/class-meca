@@ -1,0 +1,902 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Bienvenue sur le site dédié au cours de mécanique d'UniLaSalle Amiens.">
+      
+      
+        <meta name="author" content="Jules Topart">
+      
+      
+        <link rel="canonical" href="https://unifactory-lab.github.io/class-meca/exo/tp3/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>TP 3 : Conception d’un Système Dynamique - La Grue Rotative - Cours de Mécanique</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=indivisa:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"indivisa";--md-code-font:"Ubuntu Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/neoteroi-mkdocs.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/pseudo-code.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="unilasalle" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tp-3-conception-dun-systeme-dynamique-la-grue-rotative" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+    <nav class="md-header__inner md-grid" aria-label="header.title">
+        <a href="../.." title="Cours de Mécanique"
+            class="md-header__button md-logo" aria-label="Cours de Mécanique" data-md-component="logo">
+            
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 22a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-6v7L9.5 7.5 7 9V2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12Z"/></svg>
+
+        </a>
+        <label class="md-header__button md-icon" for="__drawer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+        </label>
+
+        <img class="unilogo" src="https://unifactory-lab.github.io/class-meca/images/logo-unilasalle-white.png">
+
+        <div class="md-header__title" data-md-component="header-title">
+            <div class="md-header__ellipsis">
+                <div class="md-header__topic">
+                    <span class="md-ellipsis">
+                        Cours de Mécanique
+                    </span>
+                </div>
+                <div class="md-header__topic" data-md-component="header-topic">
+                    <span class="md-ellipsis">
+                        
+                        TP 3 : Conception d’un Système Dynamique - La Grue Rotative
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <form class="md-header__option" data-md-component="palette">
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="unilasalle"
+                data-md-color-primary="" data-md-color-accent="" 
+                aria-label="Switch to dark mode"  type="radio"
+                name="__palette" id="__palette_1">
+            
+            <label class="md-header__button md-icon" title="Switch to dark mode"
+                for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+            
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate"
+                data-md-color-primary="" data-md-color-accent="" 
+                aria-label="Switch to light mode"  type="radio"
+                name="__palette" id="__palette_2">
+            
+            <label class="md-header__button md-icon" title="Switch to light mode"
+                for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+            
+            
+        </form>
+        
+        
+        
+        
+        <div class="md-header__source">
+            <a href="https://github.com/unifactory-lab/class-meca/" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    meca
+  </div>
+</a>
+        </div>
+        
+    </nav>
+    
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+    
+  
+  Accueil
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  Exercices
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Cours de Mécanique" class="md-nav__button md-logo" aria-label="Cours de Mécanique" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 22a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-6v7L9.5 7.5 7 9V2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12Z"/></svg>
+
+    </a>
+    Cours de Mécanique
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/unifactory-lab/class-meca/" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    meca
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Accueil
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class/0.intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class/1.vectors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre I : Mathématiques de Base pour le Mécanicien Amateur
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class/2.static/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre II : Analyse statique
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class/sos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Résumé de cours
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Exercices
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Exercices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Travaux pratiques
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Travaux pratiques
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tp1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP 1 : Prise en main de 3DExperience
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tp2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP 2 : Conception et dimensionnement d&rsquo;une Balance romaine
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tp.rdm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP 3 : Simulation FEM d&rsquo;une poutre IPN en acier galvanisé
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-1-analyse-dynamique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 1 : Analyse dynamique
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Étape 1 : Analyse dynamique">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calculs-initiaux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculs initiaux
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-2-dimensionnement-du-mecanisme-de-deplacement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 2 : Dimensionnement du mécanisme de déplacement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Étape 2 : Dimensionnement du mécanisme de déplacement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectif" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objectif
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approche" class="md-nav__link">
+    <span class="md-ellipsis">
+      Approche
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-3-conception-3d-simplifiee" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 3 : Conception 3D simplifiée
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#livrables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Livrables
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="tp-3-conception-dun-systeme-dynamique-la-grue-rotative">TP 3 : Conception d’un Système Dynamique - La Grue Rotative</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Dans ce TP, vous allez concevoir une grue rotative capable de déplacer un objet le long de son bras horizontal, tout en prenant en compte les forces dynamiques générées par la rotation. Ce projet vous permettra de maîtriser les concepts liés aux systèmes en rotation, notamment la force centrifuge et les frottements, et de concevoir un mécanisme fonctionnel pour déplacer une charge.</p>
+<p><a class="glightbox" href="https://loadmate.in/wp-content/uploads/2021/04/Pillar-Mounted-Jib-Crane-Chain-Hoist-1.jpeg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="https://loadmate.in/wp-content/uploads/2021/04/Pillar-Mounted-Jib-Crane-Chain-Hoist-1.jpeg" /></a></p>
+<hr />
+<h2 id="etape-1-analyse-dynamique">Étape 1 : Analyse dynamique</h2>
+<p>Lors de la rotation de la grue, l’objet transporté est soumis à plusieurs forces. Réalisée le bilan des actions mécanique pour comprendre et modéliser la dynamique de l&rsquo;objet en mouvement.
+Vous prendrez en compte, l&rsquo;effet de la force centrifuge ainsi que les frottements statiques et dynamique.</p>
+<h3 id="calculs-initiaux">Calculs initiaux</h3>
+<p>Pour une charge de <span class="arithmatex">\(500 kg\)</span> située à une distance de <span class="arithmatex">\(6 m\)</span> de l’axe de rotation, avec une vitesse angulaire de <span class="arithmatex">\(0,1 rad.s^{-1}\)</span>, calculez les forces suivantes :</p>
+<ul>
+<li>La force centrifuge.</li>
+<li>Les forces de frottement statique et dynamique.</li>
+</ul>
+<p>Notez vos résultats dans un tableur pour automatiser les ajustements si des paramètres évoluent.</p>
+<p>Déterminez l&rsquo;acceleration maximum pour minimiser le temps d&rsquo;accélération du système jusqu&rsquo;à une vitesse de <span class="arithmatex">\(3m.s^{-1}\)</span></p>
+<h2 id="etape-2-dimensionnement-du-mecanisme-de-deplacement">Étape 2 : Dimensionnement du mécanisme de déplacement</h2>
+<h3 id="objectif">Objectif</h3>
+<p>Vous devez concevoir un mécanisme permettant de déplacer la charge sur l’axe horizontal. Ce mécanisme devra :</p>
+<ul>
+<li>Générer une force suffisante pour surmonter les frottements et la force centrifuge.</li>
+<li>Être compact et simple à fabriquer.</li>
+</ul>
+<h3 id="approche">Approche</h3>
+<p>Basez votre conception sur une solution mécanique simple, comme :</p>
+<ul>
+<li><strong>Un moteur linéaire</strong> pour tracter la charge.</li>
+<li><strong>Un système de poulies et câbles</strong> pour transmettre la force.</li>
+<li><strong>Un rail et un chariot guidé</strong> pour assurer le déplacement.</li>
+</ul>
+<p>Précisez dans vos calculs la force minimale requise pour déplacer l’objet, ainsi que les dimensions critiques du mécanisme (longueur des câbles, diamètre des poulies, etc.).</p>
+<hr />
+<h2 id="etape-3-conception-3d-simplifiee">Étape 3 : Conception 3D simplifiée</h2>
+<p>Pour simplifier le travail de modélisation, limitez-vous aux éléments essentiels :</p>
+<ol>
+<li><strong>Le bras horizontal</strong> : Modélisez une poutre simple de section carrée ou rectangulaire.</li>
+<li><strong>La charge transportée</strong> : Représentez-la par un simple bloc de masse.</li>
+<li><strong>Le mécanisme de déplacement</strong> : Modélisez uniquement les éléments critiques, comme le câble ou le rail, en précisant leurs positions et dimensions.</li>
+</ol>
+<p>Assemblez ces éléments dans <strong>3DExperience</strong> pour vérifier leur intégration.</p>
+<hr />
+<h2 id="livrables">Livrables</h2>
+<p>À la fin de ce TP, vous devez fournir :</p>
+<ol>
+<li>Les calculs détaillés des forces et dimensions dans un rapport clair.</li>
+<li>Le modèle 3D simplifié, intégrant le bras, la charge et le mécanisme.</li>
+<li>Un tableau Excel montrant les ajustements de vos calculs.</li>
+</ol>
+<hr />
+<p><strong>Bon courage !</strong> Ce projet mettra en lumière vos compétences en dynamique et en conception mécanique tout en vous initiant à la simulation des systèmes dynamiques.</p>
+
+
+<!-- Last updated date -->
+
+<hr />
+<div class="md-source-date">
+  <small>
+    
+      Auteur :  Jules Topart - 
+    
+    <!-- mkdocs-git-revision-date-localized-plugin -->
+    
+      Dernière mise à jour: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">21 janvier 2025</span>
+
+      
+
+    <!-- mkdocs-git-revision-date-plugin -->
+    
+  </small>
+</div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright 2021 - Unilasalle Amiens - Creative Commons Attribution Non Commercial
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.tabs", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "search.suggest", "navigation.footer", "navigation.top", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../../js/mkdocs-charts-plugin.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+      
+        <script src="../../theme/p5.min.js"></script>
+      
+        <script src="../../theme/p5.fillGradient.js"></script>
+      
+        <script src="../../theme/config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/function-plot/dist/function-plot.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/1.5.2/math.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
