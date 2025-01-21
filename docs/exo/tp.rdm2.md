@@ -13,7 +13,7 @@ Dans ce TP, vous allez mettre en pratique vos acquis précédents pour réaliser
 - Un plan de cotation est fourni.
 - Des captures d'écran de l'assemblage des 3 pièces ainsi que le résultat élément fini attendu (sans les valeurs numériques) sont fournis dans le dossier d'accompagnement.
 
-[Téléchargé le plan de cotation](./files/tp.rdm.pdf)
+[Téléchargé le plan de cotation](./files/tp.rdm.pdf){.md-button}
 
 ## Étapes du TP
 
